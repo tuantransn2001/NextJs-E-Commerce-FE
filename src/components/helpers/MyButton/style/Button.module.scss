@@ -1,0 +1,144 @@
+@import '../../../../sass/helpers/variable';
+@import '../../../../sass/helpers/mixin';
+
+.btn {
+  width: max-content;
+  border: none;
+  outline: none;
+  border-radius: $default-border-radius;
+  font-family: 'DM Sans', sans-serif;
+  transition: all ease 0.25s;
+  @include flex-box(row, none, center, center); // * --- Background transparent
+  background-color: $primary-color;
+  @include text-style($fs-3, $medium, 1, 0.1rem, center, none, $white-1);
+  padding: 1.2rem 1rem;
+  &.maxWidth {
+    width: 100%;
+  }
+  &.isTransparent {
+    background-color: transparent !important;
+    @include text-style($fs-1, $medium, 1, none, center, none, $primary-color);
+    padding: 0;
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+  // * --- Max size
+  &.isMaxSize {
+    width: 100%;
+  }
+  // * --- Disable
+  &.disable {
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: rgba($color: $primary-color, $alpha: 0.9);
+  }
+  // * --- Size
+
+  &.hug {
+    @extend .size-hug !optional;
+  }
+  &.small {
+    @extend .size-small !optional;
+  }
+  &.medium {
+    @extend .size-medium !optional;
+  }
+  &.large {
+    @extend .size-large !optional;
+  }
+  // * --- Shape
+  &.primary {
+    @extend .primary-style !optional;
+  }
+  // * --- Style
+  &.sbiFollow {
+    background-color: $blue-2;
+    border-radius: $default-border-radius;
+  }
+  &.close-shopping-basket {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.1rem solid #c20114;
+    color: #c20114;
+    position: absolute;
+    top: 2rem;
+    right: 0rem;
+    transition: all ease 0.3s;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+  &.widget-elementor {
+    display: block;
+    @include text-style(
+      $fs-1,
+      $medium,
+      1,
+      0.1rem,
+      center,
+      uppercase,
+      $white-color
+    );
+    text-decoration: none;
+    &-with-text {
+      @include text-style(
+        $fs-4,
+        $semi-bold,
+        1,
+        0.1rem,
+        left,
+        capitalize,
+        $primary-color
+      );
+
+      & svg {
+        width: 2.7rem;
+        height: 2.7rem;
+      }
+    }
+  }
+  &.view-basket {
+    @extend .view-basket;
+  }
+  &.seek-password {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  &.category-quick-view {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: $white-color;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 1.8rem 0;
+    @include text-style(
+      $fs-7,
+      $medium,
+      1,
+      none,
+      center,
+      uppercase,
+      $white-color
+    );
+  }
+  // ? -- Event Effect
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($color: $primary-color, $alpha: 0.9);
+  }
+  // ? Status
+  &.success {
+    background-color: $green-1;
+    color: $white-1;
+    user-select: none;
+    .content-on-handle-success {
+      @include flex-box(row, 0.6rem, center, center);
+
+      & svg {
+        margin-top: -0.25rem;
+      }
+    }
+  }
+}

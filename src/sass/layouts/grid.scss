@@ -1,0 +1,91 @@
+.grid {
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+.wide {
+  width: 1400px;
+  margin: 0 auto;
+}
+.about-shop-block-wide {
+  width: 700px;
+  margin: 0 auto;
+}
+.admin-form-wide {
+  width: 700px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.row.infor-story-row {
+  margin-left: -21px;
+  margin-right: -21px;
+}
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mt-gutter {
+  padding-left: 0;
+  padding-right: 0;
+}
+.gutter {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.infor-story-gutter {
+  padding-left: 21px;
+  padding-right: 21px;
+}
+.c-1 {
+  flex: 0 0 8.3333%;
+  max-width: 8.3333%;
+}
+.c-2 {
+  flex: 0 0 16.6667%;
+  max-width: 16.6667%;
+}
+.c-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.c-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+.c-5 {
+  flex: 0 0 41.6667%;
+  max-width: 41.6667%;
+}
+.c-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.c-7 {
+  flex: 0 0 58.3333%;
+  max-width: 58.3333%;
+}
+.c-8 {
+  flex: 0 0 66.6667%;
+  max-width: 66.6667%;
+}
+.c-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.c-10 {
+  flex: 0 0 83.3333%;
+  max-width: 83.3333%;
+}
+.c-11 {
+  flex: 0 0 91.6667%;
+  max-width: 91.6667%;
+}
+.c-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
