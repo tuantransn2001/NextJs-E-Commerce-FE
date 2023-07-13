@@ -9,7 +9,7 @@ import {
 } from '@/components/SVCIcon';
 import lenleys_main_logo from '@/assets/img/logo/lenleys_main_logo.png';
 import classNames from 'classnames/bind';
-import { BUTTON_TYPE } from '@/ts/enums/common';
+import { BUTTON_TYPE, HREF } from '@/ts/enums/common';
 const cx = classNames.bind(require('./style/Header.module.scss'));
 
 const storeLocationBtnContentStyle = {
@@ -41,18 +41,18 @@ export default function Header({}) {
         <div className={cx('header')}>
           <div className="row mb-2">
             <div className="c-3 gutter flex-item-horizontal-start gap-1">
-              <MyButton transparent type={BUTTON_TYPE.primary}>
+              <MyButton href="/auth" transparent type={BUTTON_TYPE.primary}>
                 {authIcon}
               </MyButton>
 
-              <MyButton transparent type={BUTTON_TYPE.primary}>
+              <MyButton href={HREF.info} transparent type={BUTTON_TYPE.primary}>
                 <span style={storeLocationBtnContentStyle}>
                   {viewStoreIcon} OUR STORES
                 </span>
               </MyButton>
             </div>
             <div className="c-6 gutter flex-center">
-              <MyButton transparent type={BUTTON_TYPE.primary}>
+              <MyButton href={HREF.home} transparent type={BUTTON_TYPE.primary}>
                 <Image
                   src={lenleys_main_logo}
                   alt="Main Logo"

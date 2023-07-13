@@ -1,0 +1,33 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.products-delivery-list {
+  .product-delivery-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    .product-delivery-img-wrapper {
+      width: 100%;
+      height: 30rem;
+      .product-delivery-img-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .product-delivery-name-link {
+      @include text-style(
+        $fs-2,
+        $semi-bold,
+        1,
+        0.1rem,
+        center,
+        uppercase,
+        $primary-color
+      );
+      text-decoration: none;
+    }
+    .product-delivery-price {
+      @include text-style($fs-1, $normal, 1, 0, center, none, $black-2);
+    }
+  }
+}

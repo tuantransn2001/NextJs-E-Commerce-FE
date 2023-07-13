@@ -1,14 +1,14 @@
-export enum API_STUFF {
-  URL = 'http://localhost:8001',
-}
-
 export enum RESPONSE_STATUS {
   SUCCESS = 'Success',
   FAIL = 'Fail',
 }
 export enum API_PATH {
-  login = 'auth/login',
-  register = 'auth/register',
+  login = '/auth/login',
+  register = '/auth/register',
+  getAllCategory = '/category/get-all',
+  getOneCategory = '/category/get-by-id',
+  getAllProduct = '/product/get-all',
+  getOneProduct = '/product/get-by-id',
 }
 export enum STATUS_MESSAGE {
   SUCCESS = 'Success',

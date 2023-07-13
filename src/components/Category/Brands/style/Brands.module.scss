@@ -1,0 +1,7 @@
+@import "../../../../sass/helpers/mixin.scss";
+.category-brands-wrapper {
+  padding: 4.2rem 0;
+  .category-brands {
+    @include flex-box(column, 1.8rem, none, none);
+  }
+}

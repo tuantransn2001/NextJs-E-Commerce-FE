@@ -2,17 +2,15 @@
 import React from 'react';
 import { WrapperComponentProps } from '@/ts/interfaces/common';
 import { GlobalStyleStyled } from './style/GlobalStyle';
+import { ChakraProvider } from '@chakra-ui/react';
 import '../../../sass/helpers/extend.scss';
 import '../../../sass/layouts/grid.scss';
+import { theme } from '@/theme/ChakraProvider';
 export default function GlobalStyle({ children }: WrapperComponentProps) {
   return (
     <React.Fragment>
       <GlobalStyleStyled />
-      <div className="grid">
-        <div className="row">
-          <div className="c-12 gutter">{children}</div>
-        </div>
-      </div>
+      <ChakraProvider theme={theme}>{children}</ChakraProvider>
     </React.Fragment>
   );
 }

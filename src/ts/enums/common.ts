@@ -11,3 +11,9 @@ export enum BUTTON_ACTION_TYPE {
   submit = 'submit',
   reset = 'reset',
 }
+
+export enum HREF {
+  home = '/home',
+  auth = '/auth',
+  info = '/info',
+}

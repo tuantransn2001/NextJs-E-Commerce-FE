@@ -1,0 +1,13 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+@import '../../../../sass/helpers/extend.scss';
+.products-sorting-wrapper {
+  @include flex-box(row, none, center, space-between);
+  margin-bottom: 4.3rem;
+  .products-result-count {
+    @extend .paragraph-text-style;
+    font-weight: $normal;
+  }
+}
+
+
