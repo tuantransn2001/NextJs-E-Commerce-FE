@@ -1,5 +1,5 @@
-import { Category } from '@/ts/dto/category.dto';
+import { CategoryDTO } from '@/ts/dto/common.dto';
 
 export type AppInitiateState = {
-  categories: Category[];
+  categories: CategoryDTO[];
 };

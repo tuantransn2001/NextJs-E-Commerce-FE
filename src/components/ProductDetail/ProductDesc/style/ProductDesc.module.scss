@@ -3,15 +3,11 @@
 @import '../../../../sass/helpers/extend.scss';
 .product-description-wrapper {
   padding: 6rem 2rem;
-  .product-detail-img-link {
-    width: 100%;
-    height: 100%;
-    @include flex-box(row, none, center, center);
-    .product-detailt-img {
-      width: 80%;
-      height: 80%;
-      object-fit: contain;
-    }
+
+  .product-detailt-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
   }
   .product-information-wrapper {
     @include flex-box(column, 2rem, none, none);
@@ -75,28 +71,34 @@
       }
     }
   }
-  .payment-option {
-    height: 4.2rem;
-
-    border-radius: 0.4rem;
-    border: 1px solid darkgray;
-    padding: 0.5rem 0.75rem;
-    background-color: rgba(0, 0, 0, 0.04);
-    @include flex-box(row, 0.2rem, center, none);
-    cursor: pointer;
-    & input {
-      margin-top: -0.2rem;
-    }
-    & span {
-      @include text-style(
-        $fs-2,
-        $medium,
-        none,
-        none,
-        left,
-        none,
-        $primary-color
-      );
+  .payment-options-wrapper {
+    @include flex-box(row, 0.8rem, none, none);
+    .payment-option-wrapper {
+      width: 100%;
+      .payment-option {
+        height: 4.2rem;
+        width: 100%;
+        border-radius: 0.4rem;
+        border: 1px solid darkgray;
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(0, 0, 0, 0.04);
+        @include flex-box(row, 0.2rem, center, none);
+        cursor: pointer;
+        & input {
+          margin-top: -0.2rem;
+        }
+        & span {
+          @include text-style(
+            $fs-2,
+            $medium,
+            none,
+            none,
+            left,
+            none,
+            $primary-color
+          );
+        }
+      }
     }
   }
   .payment-benefit {

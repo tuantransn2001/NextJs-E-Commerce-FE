@@ -8,8 +8,8 @@
   border-radius: $default-border-radius;
   font-family: 'DM Sans', sans-serif;
   transition: all ease 0.25s;
-  @include flex-box(row, none, center, center); // * --- Background transparent
-  background-color: $primary-color;
+  @include flex-box(row, none, center, center);
+  background-color: $primary-color !important; // * --- Background transparent
   @include text-style($fs-3, $medium, 1, 0.1rem, center, none, $white-1);
   padding: 1.2rem 1rem;
   &.maxWidth {
@@ -39,13 +39,41 @@
     @extend .size-hug !optional;
   }
   &.small {
-    @extend .size-small !optional;
+    padding: 0.7rem 1.2rem;
+    @include text-style(
+      $fs-1,
+      $normal,
+      $default-line-height,
+      $letter-spacing-1,
+      center,
+      capitalize,
+      $white-color
+    );
   }
   &.medium {
-    @extend .size-medium !optional;
+    padding: 1.4rem 1.6rem;
+    @include text-style(
+      $fs-2,
+      $normal,
+      $default-line-height,
+      $letter-spacing-1,
+      center,
+      capitalize,
+      $white-color
+    );
   }
   &.large {
-    @extend .size-large !optional;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    @include text-style(
+      $fs-3,
+      $normal,
+      $default-line-height,
+      $letter-spacing-1,
+      center,
+      capitalize,
+      $white-color
+    );
   }
   // * --- Shape
   &.primary {

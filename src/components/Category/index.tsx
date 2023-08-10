@@ -8,9 +8,13 @@ import classNames from 'classnames/bind';
 import MyButton from '../helpers/MyButton';
 import LoadingScreen from '../helpers/LoadingScreen';
 import { useGet } from '@/customizes/hooks';
-import { BUTTON_TYPE } from '@/ts/enums/common';
-import { Product, ProductVariant } from '@/domain/product.d.type';
-import { isEmpty } from '@/common';
+import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
+import { Product, ProductVariant } from '@/domain/common';
+import {
+  capitalize,
+  handleFormatTitleInCludeSpecChar,
+  isEmpty,
+} from '@/common';
 import { API_PATH } from '@/ts/enums/api_enums';
 const cx = classNames.bind(require('./style/CategoryPage.module.scss'));
 
@@ -27,6 +31,7 @@ const SensationalProducts = ({ title }: SensationalProducts) => {
     },
     { title },
   );
+
   const renderProductsDetail = () => {
     return isLoading || isEmpty(productsData?.data) ? (
       <LoadingScreen />
@@ -107,9 +112,13 @@ const SensationalProducts = ({ title }: SensationalProducts) => {
             <div className="row mt-2">
               <div className="c-12 gutter flex-center">
                 <MyButton
+                  size={BUTTON_SIZE.md}
                   href={`/products/${title}`}
                   type={BUTTON_TYPE.primary}
-                >{`View all ${title}`}</MyButton>
+                >{`View all ${handleFormatTitleInCludeSpecChar(
+                  title,
+                  '&',
+                )}`}</MyButton>
               </div>
             </div>
           </div>
@@ -143,7 +152,9 @@ const Collection = ({}) => {
                 and chaise end combinations. Tempted to make a change?
               </p>
 
-              <MyButton type="primary">See collection</MyButton>
+              <MyButton size={BUTTON_SIZE.md} type="primary">
+                See collection
+              </MyButton>
             </div>
           </div>
           <div className="c-7 gutter">

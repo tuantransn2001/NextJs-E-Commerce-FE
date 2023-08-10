@@ -10,7 +10,9 @@ export default function GlobalStyle({ children }: WrapperComponentProps) {
   return (
     <React.Fragment>
       <GlobalStyleStyled />
-      <ChakraProvider theme={theme}>{children}</ChakraProvider>
+      <ChakraProvider resetCSS={false} theme={theme}>
+        {children}
+      </ChakraProvider>
     </React.Fragment>
   );
 }

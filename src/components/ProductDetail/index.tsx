@@ -1,7 +1,6 @@
 /* eslint-disable import/extensions */
-import React, { useState } from 'react';
+import React from 'react';
 import ProductDesc from './ProductDesc';
-import Tab from './Tab/Tab';
 
 import classNames from 'classnames/bind';
 import { useGet, useGetURLParams } from '@/customizes/hooks';

@@ -41,7 +41,7 @@ export default function Header({}) {
         <div className={cx('header')}>
           <div className="row mb-2">
             <div className="c-3 gutter flex-item-horizontal-start gap-1">
-              <MyButton href="/auth" transparent type={BUTTON_TYPE.primary}>
+              <MyButton href={HREF.auth} transparent type={BUTTON_TYPE.primary}>
                 {authIcon}
               </MyButton>
 
@@ -66,7 +66,7 @@ export default function Header({}) {
               <MyButton transparent type={BUTTON_TYPE.primary}>
                 {searchIcon}
               </MyButton>
-              <MyButton transparent type={BUTTON_TYPE.primary}>
+              <MyButton href={HREF.cart} transparent type={BUTTON_TYPE.primary}>
                 {cartIcon}
               </MyButton>
             </div>

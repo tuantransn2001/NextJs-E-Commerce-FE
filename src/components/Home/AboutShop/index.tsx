@@ -5,7 +5,7 @@ import MyButton from '@/components/helpers/MyButton';
 import Section from '@/components/helpers/Section';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
-import { BUTTON_TYPE } from '@/ts/enums/common';
+import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 const cx = classNames.bind(require('./style/AboutShop.module.scss'));
 
 export default function AboutShop({}) {
@@ -71,7 +71,9 @@ export default function AboutShop({}) {
         </div>
         <div className="row">
           <div className="c-12 gutter flex-center">
-            <MyButton type={BUTTON_TYPE.primary}>Discover lenleys</MyButton>
+            <MyButton size={BUTTON_SIZE.md} type={BUTTON_TYPE.primary}>
+              Discover lenleys
+            </MyButton>
           </div>
         </div>
       </div>

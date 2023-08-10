@@ -4,7 +4,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
 import MyButton from '@/components/helpers/MyButton';
 import { authSuccessStatusContent } from '@/data/auth';
-import { BUTTON_TYPE } from '@/ts/enums/common';
+import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 const cx = classNames.bind(require('./style/AuthPageSuccess.module.scss'));
 
 interface AuthPageSuccessProps {
@@ -26,10 +26,10 @@ export default function AuthPageSuccess({ formType }: AuthPageSuccessProps) {
           {authSuccessStatusContent[formType].content}
         </span>
         <div className={cx('direction-btns')}>
-          <MyButton maxWidth type={BUTTON_TYPE.primary}>
+          <MyButton size={BUTTON_SIZE.md} maxWidth type={BUTTON_TYPE.primary}>
             {authSuccessStatusContent[formType].directionBtnContent[0]}
           </MyButton>
-          <MyButton maxWidth type={BUTTON_TYPE.primary}>
+          <MyButton size={BUTTON_SIZE.md} maxWidth type={BUTTON_TYPE.primary}>
             {authSuccessStatusContent[formType].directionBtnContent[1]}
           </MyButton>
         </div>

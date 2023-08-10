@@ -1,4 +1,5 @@
 /* eslint-disable import/extensions */
+import { Cart } from '@/domain/common';
 import { Falsy, ObjectType } from '@/ts/types/common';
 export const _ = undefined;
 export const isEmpty = (target: ObjectType | any[]): boolean => {
@@ -27,15 +28,46 @@ export const checkMissPropertyInObjectBaseOnValueCondition = (
 
   return arrMissArray;
 };
-export const capitalize = (str: string): string =>
-  str.charAt(0).toUpperCase() + str.slice(1);
+export const capitalizeChar = (str: string | undefined): string => {
+  if (str) {
+    const source = str.toLowerCase();
+    return source.toLowerCase().charAt(0).toUpperCase() + source.slice(1);
+  } else {
+    return '';
+  }
+};
+
+export const handleFormatTitleInCludeSpecChar = (
+  str: string | undefined,
+  specChar: string,
+) => {
+  return str
+    ? str
+        .split(specChar)
+        .map((str) => capitalizeChar(str))
+        .join(specChar)
+    : '';
+
+  // return str.split();
+};
 
 // A wrapper for "JSON.parse()"" to support "undefined" value
 export function parseJSON<T>(value: string | null): T | undefined {
   try {
     return value === 'undefined' ? undefined : JSON.parse(value ?? '');
   } catch {
-    console.log('parsing error on', { value });
     return undefined;
   }
 }
+
+export const handleCalcCartTotal = (cartData: Cart | null) => {
+  const isCartEmpty = cartData === null || isEmpty(cartData.products);
+  if (isCartEmpty) {
+    return 0;
+  } else {
+    return cartData?.products.reduce((total, product) => {
+      total += +product.price * product.quantity;
+      return total;
+    }, 0);
+  }
+};

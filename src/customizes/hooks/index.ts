@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/extensions */
 import { parseJSON } from '@/common';
-import API from '@/services/API';
 import { PaginationDTO } from '@/ts/dto/common.dto';
 import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import { ObjectType, ResponseAttributes, SetValue } from '@/ts/types/common';
@@ -9,6 +8,7 @@ import HttpException from '@/ts/utils/http.exception';
 import { useEffect, useState, useCallback } from 'react';
 import { useEventCallback, useEventListener } from 'usehooks-ts';
 import { useRouter } from 'next/router';
+import API from '@/services/common';
 export const useTitle = (title: string) => {
   useEffect(() => {
     title && (document.title = title);

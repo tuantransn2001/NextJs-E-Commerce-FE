@@ -5,16 +5,22 @@ import HttpException from '../utils/http.exception';
 export type Field = {
   label: string;
   fieldName: string;
-  placeholder: string;
   type: string;
   defaultValue?: string;
+  placeholder?: string;
+  column?: number;
+  classNames?: {
+    label: string;
+    input: string;
+  };
+  options?: Record<string, string>[];
   isRequire?: boolean;
   regExp?: RegExp;
 };
 export type ObjectType = Record<string, any>;
 export type IFormInput = LoginDTO & RegisterDTO;
 export type ResponseAttributes = {
-  status: string;
+  status: string | number;
   data?: any;
   error?: HttpException;
 };

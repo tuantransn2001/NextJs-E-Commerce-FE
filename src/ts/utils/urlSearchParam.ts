@@ -250,7 +250,5 @@ export default URLSearchParam;
 //   },
 //   j: [1, 2, 3, 4],
 // });
-// console.log(urlParams); // a=1&b=zad&c-d=2&c-e=f&j=1&j=2&j=3&j=4
 
 // let obj = urlParamsToObj(urlParams);
-// console.log(obj); // { "a": "1", "b": "zad", "j": [ "1", "2", "3", "4" ], "c": { "d": "2", "e": "f" } }

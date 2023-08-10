@@ -18,16 +18,12 @@ function PaginatedItems<T>({
   const [pageCount, setPageCount] = useState<number>(0);
   const [itemOffset, setItemOffset] = useState<number>(0);
   useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // const endOffset = itemOffset + itemsPerPage;
     setPageCount(Math.ceil(items.length / itemsPerPage));
   }, [items, itemOffset, itemsPerPage]);
 
   const handlePageClick: HandlePageClick = ({ selected }) => {
     const newOffset = (selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${selected}, which is offset ${newOffset}`,
-    );
 
     setPageNumber(selected);
     setItemOffset(newOffset);

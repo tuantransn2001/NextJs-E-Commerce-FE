@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import '../../../../sass/helpers/variable.scss';
 export const GlobalStyleStyled = createGlobalStyle`
 html,
 body,

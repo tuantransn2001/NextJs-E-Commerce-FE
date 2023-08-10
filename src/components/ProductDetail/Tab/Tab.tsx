@@ -1,4 +1,4 @@
-import * as CommonType from '@/ts/types/common';
+import { ObjectType, SetValue } from '@/ts/types/common';
 import { useState } from 'react';
 const tabListStyle = {
   display: 'flex',
@@ -28,7 +28,7 @@ const handleStyleActiveTab = (currentIndex: number, compareIndex: number) => {
 };
 
 interface TabProps {
-  setCurrentTab: CommonType.SetValue<string>;
+  setCurrentTab: SetValue<string>;
   tabContentList: string[];
 }
 
@@ -48,12 +48,7 @@ const Tab = ({ setCurrentTab, tabContentList }: TabProps) => {
             }}
           >
             <span
-              style={
-                handleStyleActiveTab(
-                  index,
-                  indexActive,
-                ) as CommonType.ObjectType
-              }
+              style={handleStyleActiveTab(index, indexActive) as ObjectType}
             >
               {tabContent}
             </span>

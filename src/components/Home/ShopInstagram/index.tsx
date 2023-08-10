@@ -4,7 +4,7 @@ import MyButton from '@/components/helpers/MyButton';
 import { shopInstagram } from '@/data/home';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
-import { BUTTON_TYPE } from '@/ts/enums/common';
+import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 import { instagramIcon } from '@/components/SVCIcon';
 const cx = classNames.bind(require('./style/ShopInstagram.module.scss'));
 
@@ -37,14 +37,17 @@ const SBInstagram = ({}) => {
         <div className="row">{renderInstagramImgLink()}</div>
         <div className="row mt-2">
           <div className="c-12 gutter flex-center">
-            <a href="https://www.instagram.com/lenleyshome/" target="blank">
-              <MyButton type={BUTTON_TYPE.primary}>
-                <span className="flex-center" style={{ gap: '0.4rem' }}>
-                  {instagramIcon}
-                  Follow on instagram
-                </span>
-              </MyButton>
-            </a>
+            <MyButton
+              href="https://www.instagram.com/lenleyshome/"
+              target="blank"
+              size={BUTTON_SIZE.sm}
+              type={BUTTON_TYPE.primary}
+            >
+              <span className="flex-center" style={{ gap: '0.4rem' }}>
+                {instagramIcon}
+                Follow on instagram
+              </span>
+            </MyButton>
           </div>
         </div>
       </div>

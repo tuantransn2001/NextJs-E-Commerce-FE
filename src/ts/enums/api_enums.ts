@@ -5,10 +5,16 @@ export enum RESPONSE_STATUS {
 export enum API_PATH {
   login = '/auth/login',
   register = '/auth/register',
+  getMe = '/auth/me',
   getAllCategory = '/category/get-all',
   getOneCategory = '/category/get-by-id',
   getAllProduct = '/product/get-all',
   getOneProduct = '/product/get-by-id',
+  getUserCart = '/cart/user',
+  addUserCart = '/cart/add',
+  getAllPaymentMethod = '/payment/get-all',
+  getUserAddress = '/address/user',
+  createUserOrder = '/order/user',
 }
 export enum STATUS_MESSAGE {
   SUCCESS = 'Success',

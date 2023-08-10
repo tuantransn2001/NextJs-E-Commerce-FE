@@ -22,7 +22,7 @@ const CategoryView = () => {
                       <Image
                         width={100}
                         height={100}
-                        src={category.img}
+                        src={category.imgSrc}
                         alt={category.title}
                         className={cx('popular-product-img')}
                       />

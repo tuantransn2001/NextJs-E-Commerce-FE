@@ -1,26 +1,24 @@
 /* eslint-disable import/extensions */
 import FormController from '@/components/helpers/FormController';
 import MyButton from '@/components/helpers/MyButton';
-import { useTitle } from '@/customizes/hooks';
+import { useLocalStorage, useTitle } from '@/customizes/hooks';
 import { authFormData } from '@/data/auth';
 import { AUTH_TYPE, BUTTON_TYPE } from '@/ts/enums/common';
-import API from '@/services/API';
-import { IFormInput, Response } from '@/ts/types/common';
+import AuthService from '@/services/auth.service';
+import { IFormInput, ResponseAttributes } from '@/ts/types/common';
 import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
-import { useState } from 'react';
-import { Dispatch } from 'react';
-import { SetStateAction } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import HttpException from '@/ts/utils/http.exception';
 import {
   checkMissPropertyInObjectBaseOnValueCondition,
   isEmpty,
 } from '@/common';
 import classNames from 'classnames/bind';
+import { useDispatch } from 'react-redux';
 const cx = classNames.bind(require('./style/AuthPageForm.module.scss'));
 
 interface AuthFormProps {
   formType: string;
-  setIsAuth: Dispatch<SetStateAction<boolean>>;
   setFormType: Dispatch<SetStateAction<string>>;
 }
 
@@ -28,8 +26,8 @@ const handleOnSubmit = async (
   formType: string,
   authData: IFormInput,
   setErr: Dispatch<SetStateAction<string>>,
-  setIsAuth: Dispatch<SetStateAction<boolean>>,
   setIsLoading: Dispatch<SetStateAction<boolean>>,
+  setAccessToken: Dispatch<SetStateAction<string>>,
 ) => {
   setIsLoading(true);
   const missFieldData = checkMissPropertyInObjectBaseOnValueCondition(
@@ -38,16 +36,14 @@ const handleOnSubmit = async (
   );
 
   if (isEmpty(missFieldData)) {
-    const result: Response =
+    const { status, data, error }: ResponseAttributes =
       formType === AUTH_TYPE.LOGIN
-        ? await API.login(authData)
-        : await API.register(authData);
-
-    const { status, error } = result;
+        ? await AuthService.login(authData)
+        : ((await AuthService.register(authData)) as ResponseAttributes);
 
     if (status === RESPONSE_STATUS.SUCCESS) {
       // ? Navigate
-      setIsAuth(true);
+      setAccessToken(data.access_token);
     }
     if (status === RESPONSE_STATUS.FAIL) {
       // ! Log error
@@ -71,11 +67,9 @@ const switchForm = (
   setErr('');
 };
 
-export default function AuthPageForm({
-  formType,
-  setIsAuth,
-  setFormType,
-}: AuthFormProps) {
+export default function AuthPageForm({ formType, setFormType }: AuthFormProps) {
+  const dispatch = useDispatch();
+  const [_, setAccessToken] = useLocalStorage('access_token', '');
   const [err, setErr] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   useTitle('My Account - Lenleys');
@@ -114,8 +108,8 @@ export default function AuthPageForm({
                   formType,
                   authData,
                   setErr,
-                  setIsAuth,
                   setIsLoading,
+                  setAccessToken,
                 )
               }
               submitAction={formType}

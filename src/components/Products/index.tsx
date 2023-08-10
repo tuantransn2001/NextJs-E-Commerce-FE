@@ -7,7 +7,7 @@ import PaginatedItems from '../Pagination';
 import classNames from 'classnames/bind';
 import { useGet, useGetURLParams } from '@/customizes/hooks';
 import Page from '../helpers/Page';
-import { Product, ProductVariant } from '@/domain/product.d.type';
+import { Product, ProductVariant } from '@/domain/common';
 import Image from 'next/image';
 import { isEmpty } from '@/common';
 import { API_PATH } from '@/ts/enums/api_enums';
@@ -43,7 +43,7 @@ const Product = ({ data }: ProductProps) => {
 
 const ProductsPage = ({}) => {
   const [pageNumber, setPageNumber] = useState<number>(1);
-  const params = useGetURLParams();
+  const [title] = useGetURLParams();
   const { data: products, isLoading } = useGet(
     API_PATH.getAllProduct,
     {
@@ -51,7 +51,7 @@ const ProductsPage = ({}) => {
       page_number: pageNumber,
     },
     {
-      title: params[0] ? params[0] : '',
+      title: title ? title : '',
     },
   );
 

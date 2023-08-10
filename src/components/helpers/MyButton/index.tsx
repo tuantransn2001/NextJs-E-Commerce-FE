@@ -17,6 +17,8 @@ interface ButtonProps extends WrapperComponentProps {
   isLoading?: boolean;
   style?: ObjectType;
   className?: string;
+  size?: string;
+  [key: string]: any;
 }
 
 export default function MyButton({
@@ -28,7 +30,9 @@ export default function MyButton({
   onClick,
   isLoading,
   style,
+  size,
   className: _className,
+  ...rest
 }: ButtonProps) {
   const className = cx(
     'btn',
@@ -37,11 +41,13 @@ export default function MyButton({
       maxWidth,
     },
     _className,
+    size,
   );
 
   if (href) {
     return (
       <Link
+        {...rest}
         href={href}
         style={style}
         onClick={onClick}
@@ -55,6 +61,7 @@ export default function MyButton({
 
   return (
     <Button
+      {...rest}
       style={style}
       onClick={onClick}
       type={actionType ? actionType : BUTTON_ACTION_TYPE.button}

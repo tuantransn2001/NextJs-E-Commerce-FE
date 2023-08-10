@@ -12,8 +12,16 @@ export enum BUTTON_ACTION_TYPE {
   reset = 'reset',
 }
 
+export enum BUTTON_SIZE {
+  sm = 'small',
+  md = 'medium',
+  lg = 'large',
+}
+
 export enum HREF {
   home = '/home',
   auth = '/auth',
   info = '/info',
+  cart = '/cart',
+  checkout = '/checkout',
 }
