@@ -5,13 +5,12 @@
   display: none;
 }
 
-main {
-  clear: both;
-  font-size: 0.75rem;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 1rem 0;
-  width: 960px;
+.local_paragraph-text-style {
+  @extend .paragraph-text-style!optional;
+}
+
+.local_paragraph-text-style-strong {
+  @extend .paragraph-text-style-strong !optional;
 }
 
 .basket {
@@ -33,12 +32,12 @@ main {
   @include flex-box(row, none, center, space-between);
 }
 
-label {
-  display: block;
-  margin-bottom: 2rem;
-}
 .promotion-module {
   width: 40%;
+  & label {
+    display: block;
+    margin-bottom: 2rem;
+  }
 }
 
 .promo-code-field {
@@ -72,23 +71,23 @@ label {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   margin-top: 1.625rem;
-}
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-li {
-  color: #111;
-  display: inline-block;
-  padding: 1.2rem 0;
-}
+  & ul li {
+    color: #111;
+    display: inline-block;
+    padding: 1.2rem 0;
+  }
 
-li.price:before,
-li.subtotal:before {
-  content: '';
+  & ul li.price:before,
+  & ul li.subtotal:before {
+    content: '';
+  }
 }
 
 .item {
@@ -181,9 +180,6 @@ li.subtotal:before {
   font-size: 0.625rem;
   padding: 2px;
   width: 3.75rem;
-}
-
-aside {
 }
 
 .summary {
@@ -282,7 +278,6 @@ aside {
 }
 
 @media screen and (max-width: 640px) {
-  aside,
   .basket,
   .summary,
   .item,
@@ -328,18 +323,12 @@ aside {
 }
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
-  aside {
-    padding: 0 1rem 0 0;
-  }
   .summary {
     width: 28%;
   }
 }
 
 @media screen and (max-width: 960px) {
-  main {
-    width: 100%;
-  }
   .product-details {
     padding: 0 1rem;
   }

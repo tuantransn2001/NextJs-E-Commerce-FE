@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/extensions */
 import Page from '../helpers/Page';
-import './style/Cart.scss';
 import Image from 'next/image';
 import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,6 +26,8 @@ import { ObjectType, ResponseAttributes } from '@/ts/types/common';
 import { addProductToCartDeepChecker } from '@/ts/utils/dataDeepChecker';
 import { AddProductToCartDTO, ProductCartDTO } from '@/ts/dto/common.dto';
 import CartService from '@/services/cart.service';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(require('./style/Cart.module.scss'));
 
 const SUBMIT_MODAL_DATA: ObjectType = {
   success: {
@@ -134,17 +135,33 @@ const Cart = () => {
         <div className="grid">
           <div className="row">
             <div className="c-8 gutter">
-              <div className="basket">
-                <div className="basket-labels">
+              <div className={cx('basket')}>
+                <div className={cx('basket-labels')}>
                   <ul className="flex-center">
-                    <li className="paragraph-text-style-strong item item-heading">
+                    <li
+                      className={cx(
+                        'local_paragraph-text-style-strong item item-heading',
+                      )}
+                    >
                       Product
                     </li>
-                    <li className="paragraph-text-style-strong price">Price</li>
-                    <li className="paragraph-text-style-strong quantity">
+                    <li
+                      className={cx('local_paragraph-text-style-strong price')}
+                    >
+                      Price
+                    </li>
+                    <li
+                      className={cx(
+                        'local_paragraph-text-style-strong quantity',
+                      )}
+                    >
                       Quantity
                     </li>
-                    <li className="paragraph-text-style-strong subtotal subtotal-heading">
+                    <li
+                      className={cx(
+                        'local_paragraph-text-style-strong subtotal subtotal-heading',
+                      )}
+                    >
                       Subtotal
                     </li>
                   </ul>
@@ -163,7 +180,10 @@ const Cart = () => {
                     } = product;
 
                     return (
-                      <div className="basket-product" key={product_variant_id}>
+                      <div
+                        className={cx('basket-product')}
+                        key={product_variant_id}
+                      >
                         <MyButton
                           transparent
                           style={{ color: '#333' }}
@@ -173,30 +193,34 @@ const Cart = () => {
                         >
                           <FontAwesomeIcon icon={faXmark} />
                         </MyButton>
-                        <div className="product-image-wrapper">
+                        <div className={cx('product-image-wrapper')}>
                           <Image
-                            className="product-image"
+                            className={cx('product-image')}
                             src={imgSrc}
                             width={50}
                             height={50}
                             alt={name}
                           />
                         </div>
-                        <div className="product-details">
-                          <h1 className="paragraph-text-style">
+                        <div className={cx('product-details')}>
+                          <h1 className={cx('local_paragraph-text-style')}>
                             {quantity} x {name}
-                            <p className="paragraph-text-style">
+                            <p className={cx('local_paragraph-text-style')}>
                               Navy, Size 18
                             </p>
-                            <p className="paragraph-text-style">
+                            <p className={cx('local_paragraph-text-style')}>
                               Product SKU: FJSIQW
                             </p>
                           </h1>
                         </div>
-                        <div className="paragraph-text-style price-item">
+                        <div
+                          className={cx(
+                            'local_paragraph-text-style price-item',
+                          )}
+                        >
                           {price}
                         </div>
-                        <div className="quantity-wrapper">
+                        <div className={cx('quantity-wrapper')}>
                           <MyButton
                             transparent
                             style={{ color: '#333' }}
@@ -206,7 +230,7 @@ const Cart = () => {
                           >
                             <FontAwesomeIcon icon={faMinus} />
                           </MyButton>
-                          <span className="paragraph-text-style">
+                          <span className={cx('local_paragraph-text-style')}>
                             {quantity}
                           </span>
                           <MyButton
@@ -219,7 +243,9 @@ const Cart = () => {
                             <FontAwesomeIcon icon={faPlus} />
                           </MyButton>
                         </div>
-                        <div className="paragraph-text-style subtotal">
+                        <div
+                          className={cx('local_paragraph-text-style subtotal')}
+                        >
                           {+price * quantity}
                         </div>
                       </div>
@@ -227,10 +253,10 @@ const Cart = () => {
                   })
                 )}
 
-                <div className="basket-module">
-                  <div className="promotion-module">
+                <div className={cx('basket-module')}>
+                  <div className={cx('promotion-module')}>
                     <label htmlFor="promo-code">
-                      <span className="paragraph-text-style-strong">
+                      <span className={cx('local_paragraph-text-style-strong')}>
                         Do you have promo code ?
                       </span>
                     </label>
@@ -239,7 +265,7 @@ const Cart = () => {
                       type="text"
                       name="promo-code"
                       maxLength={5}
-                      className="promo-code-field"
+                      className={cx('promo-code-field')}
                     />
 
                     <MyButton
@@ -250,7 +276,7 @@ const Cart = () => {
                       }}
                       size={BUTTON_SIZE.lg}
                       type={BUTTON_TYPE.primary}
-                      className="promo-code-cta"
+                      className={cx('promo-code-cta')}
                     >
                       Apply
                     </MyButton>
@@ -271,35 +297,41 @@ const Cart = () => {
               </div>
             </div>
             <div className="c-4 gutter">
-              <div className="summary">
-                <div className="summary-total-items ">
-                  <span className="total-items " />
-                  <span className="paragraph-text-style-strong">
+              <div className={cx('summary')}>
+                <div className={cx('summary-total-items ')}>
+                  <span className={cx('total-items ')} />
+                  <span className={cx('local_paragraph-text-style-strong')}>
                     Items in your Bag
                   </span>
                 </div>
-                <div className="summary-subtotal">
-                  <div className="subtotal-title paragraph-text-style-strong">
+                <div className={cx('summary-subtotal')}>
+                  <div
+                    className={cx(
+                      'subtotal-title local_paragraph-text-style-strong',
+                    )}
+                  >
                     Subtotal
                   </div>
                   <div
-                    className="subtotal-value final-value paragraph-text-style"
+                    className={cx(
+                      'subtotal-value final-value local_paragraph-text-style',
+                    )}
                     id="basket-subtotal"
                   >
                     {handleCalcCartTotal(cartData)}
                   </div>
-                  <div className="summary-promo hide">
-                    <div className="promo-title">Promotion</div>
+                  <div className={cx('summary-promo hide')}>
+                    <div className={cx('promo-title')}>Promotion</div>
                     <div
-                      className="promo-value final-value"
+                      className={cx('promo-value final-value')}
                       id="basket-promo"
                     />
                   </div>
                 </div>
-                <div className="summary-delivery">
+                <div className={cx('summary-delivery')}>
                   <select
                     name="delivery-collection"
-                    className="summary-delivery-selection"
+                    className={cx('summary-delivery-selection')}
                   >
                     <option value="collection">Collection</option>
                     <option value="first-class">Royal Mail 1st Class</option>
@@ -309,16 +341,18 @@ const Cart = () => {
                     </option>
                   </select>
                 </div>
-                <div className="summary-total">
-                  <div className="total-title </span>">Total</div>
+                <div className={cx('summary-total')}>
+                  <div className={cx('total-title')}>Total</div>
                   <div
-                    className="total-value final-value paragraph-text-style"
+                    className={cx(
+                      'total-value final-value local_paragraph-text-style',
+                    )}
                     id="basket-total"
                   >
                     {handleCalcCartTotal(cartData)}
                   </div>
                 </div>
-                <div className="summary-checkout">
+                <div className={cx('summary-checkout')}>
                   <MyButton
                     size={BUTTON_SIZE.lg}
                     maxWidth

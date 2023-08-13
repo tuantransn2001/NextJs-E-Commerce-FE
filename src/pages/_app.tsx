@@ -1,19 +1,25 @@
 /* eslint-disable import/extensions */
-import GlobalStyle from '@/components/helpers/GlobalStyle';
 import { store } from '@/redux/store';
 import HomeTemplate from '@/templates/Home';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
-
+import GlobalStyle from '@/components/helpers/GlobalStyle';
+import '../sass/base/reset.scss';
+import '../sass/layouts/grid.scss';
+import '../sass/helpers/variable.scss';
+import '../sass/helpers/extend.scss';
+import '../sass/helpers/mixin.scss';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <GlobalStyle>
-      <Provider store={store}>
+    <Provider store={store}>
+      <GlobalStyle>
         <HomeTemplate>
-          <Component {...pageProps} />
+          <GlobalStyle>
+            <Component {...pageProps} />
+          </GlobalStyle>
         </HomeTemplate>
-      </Provider>
-    </GlobalStyle>
+      </GlobalStyle>
+    </Provider>
   );
 };
 

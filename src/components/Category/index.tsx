@@ -179,7 +179,7 @@ const Category = ({}) => {
     id: params ? params[0] : hrefID,
   });
   const { title, subTitle, description } = data;
-  return isLoading || !hrefID || !params ? (
+  return isLoading ? (
     <LoadingScreen />
   ) : (
     <div className={cx('category-wrapper')}>

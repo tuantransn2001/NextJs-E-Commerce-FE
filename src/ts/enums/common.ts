@@ -19,7 +19,7 @@ export enum BUTTON_SIZE {
 }
 
 export enum HREF {
-  home = '/home',
+  home = '/',
   auth = '/auth',
   info = '/info',
   cart = '/cart',

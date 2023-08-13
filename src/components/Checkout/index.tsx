@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux';
 import FormController from '../helpers/FormController';
 import LoadingScreen from '../helpers/LoadingScreen';
 import Page from '../helpers/Page';
-import './style/Checkout.scss';
 import { handleCalcCartTotal } from '@/common';
 import { useState } from 'react';
 import { CreateOrderDTO } from '@/ts/dto/common.dto';
@@ -21,6 +20,8 @@ import OrderService from '@/services/order.service';
 import { ObjectType } from '@/ts/types/common';
 import MyModal from '../helpers/Modal';
 import { useRouter } from 'next/router';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(require('./style/Checkout.module.scss'));
 
 const PAYMENT_ICON: Record<number, JSX.Element> = {
   [0]: <i className="bx bx-credit-card d-block h2 mb-3" />,
@@ -98,18 +99,18 @@ const Checkout = () => {
   const renderPaymentMethod = () => {
     return (
       <div>
-        <h5 className="font-size-14 mb-3">Payment method :</h5>
+        <h5 className="mb-3">Payment method :</h5>
         <div className="row">
           {paymentMethods.data?.map((paymentMethod: Payment, index: number) => {
             return (
-              <div className="col-lg-3 col-sm-6" key={index}>
+              <div key={index}>
                 <div data-bs-toggle="collapse">
-                  <label className="card-radio-label">
+                  <label className={cx('card-radio-label')}>
                     <input
                       type="radio"
                       name="pay-method"
                       id={paymentMethod.id}
-                      className="card-radio-input"
+                      className={cx('card-radio-input')}
                       onChange={() => {
                         setOrderDispatchData((prev) => ({
                           ...prev,
@@ -117,7 +118,9 @@ const Checkout = () => {
                         }));
                       }}
                     />
-                    <span className="card-radio py-3 text-center text-truncate">
+                    <span
+                      className={`${cx('card-radio')} ${cx('text-truncate')}`}
+                    >
                       {PAYMENT_ICON[index]}
                       {paymentMethod.title}
                     </span>
@@ -144,12 +147,12 @@ const Checkout = () => {
                 width={200}
                 height={200}
                 title="product-img"
-                className="avatar-lg rounded"
+                className={cx('avatar-lg')}
               />
             </th>
             <td>
-              <h5 className="font-size-16 text-truncate">
-                <span className="text-dark">{item.name}</span>
+              <h5 className={cx('text-truncate')}>
+                <span className={cx('text-dark')}>{item.name}</span>
               </h5>
               <p className="text-muted mb-0">
                 <i className="bx bxs-star text-warning" />
@@ -172,14 +175,14 @@ const Checkout = () => {
   const renderUserAddresses = () => {
     return addressesData.data?.map((address: Address, index: number) => {
       return (
-        <div className="col-lg-4 col-sm-6" key={index}>
+        <div key={index}>
           <div data-bs-toggle="collapse">
-            <label className="card-radio-label mb-0">
+            <label className={cx('card-radio-label')}>
               <input
                 type="radio"
                 name="address"
                 id={address.id}
-                className="card-radio-input"
+                className={cx('card-radio-input')}
                 defaultChecked={false}
                 onChange={() => {
                   setOrderDispatchData((prev) => ({
@@ -188,18 +191,14 @@ const Checkout = () => {
                   }));
                 }}
               />
-              <div className="card-radio text-truncate p-3">
+              <div className={`${cx('card-radio')} ${cx('text-truncate')}`}>
                 <span className="fs-14 mb-4 d-block">Address {index + 1}</span>
                 <span className="fs-14 mb-2 d-block">{address.country}</span>
-                <span className="text-muted fw-normal text-wrap mb-1 d-block">
-                  {address.address}
-                </span>
-                <span className="text-muted fw-normal d-block">
-                  {address.postalCode}
-                </span>
+                <span className={cx('text-muted')}>{address.address}</span>
+                <span className={cx('text-muted')}>{address.postalCode}</span>
               </div>
             </label>
-            <div className="edit-btn bg-light rounded">
+            <div className={cx('edit-btn')}>
               <span
                 data-bs-toggle="tooltip"
                 data-placement="top"
@@ -229,22 +228,22 @@ const Checkout = () => {
       />
 
       <Page title="Checkout">
-        <div className="container">
+        <div className={cx('container')}>
           <div className="row">
             <div className="col-xl-8">
-              <div className="card">
-                <div className="card-body">
-                  <ol className="activity-checkout mb-0 px-4 mt-3">
-                    <li className="checkout-item">
-                      <div className="avatar checkout-icon p-1">
-                        <div className="avatar-title rounded-circle bg-primary">
+              <div className={cx('card')}>
+                <div className={cx('card-body')}>
+                  <ol className={cx('activity-checkout')}>
+                    <li className={cx('checkout-item')}>
+                      <div className={`${cx('avatar')} ${cx('checkout-icon')}`}>
+                        <div className={cx('avatar-title')}>
                           <i className="bx bxs-receipt text-white font-size-20" />
                         </div>
                       </div>
-                      <div className="feed-item-list">
+                      <div className={cx('feed-item-list')}>
                         <div>
                           <h5 className="font-size-16 mb-1">Billing Info</h5>
-                          <p className="text-muted text-truncate mb-4">
+                          <p className={cx('text-truncate')}>
                             Sed ut perspiciatis unde omnis iste
                           </p>
                           <div className="mb-3">
@@ -261,16 +260,16 @@ const Checkout = () => {
                         </div>
                       </div>
                     </li>
-                    <li className="checkout-item">
-                      <div className="avatar checkout-icon p-1">
-                        <div className="avatar-title rounded-circle bg-primary">
+                    <li className={cx('checkout-item')}>
+                      <div className={`${cx('avatar')} ${cx('checkout-icon')}`}>
+                        <div className={cx('avatar-title')}>
                           <i className="bx bxs-truck text-white font-size-20" />
                         </div>
                       </div>
-                      <div className="feed-item-list">
+                      <div className={cx('feed-item-list')}>
                         <div>
                           <h5 className="font-size-16 mb-1">Shipping Info</h5>
-                          <p className="text-muted text-truncate mb-4">
+                          <p className={cx('text-truncate')}>
                             Neque porro quisquam est
                           </p>
                           <div className="mb-3">
@@ -279,16 +278,16 @@ const Checkout = () => {
                         </div>
                       </div>
                     </li>
-                    <li className="checkout-item">
-                      <div className="avatar checkout-icon p-1">
-                        <div className="avatar-title rounded-circle bg-primary">
+                    <li className={cx('checkout-item')}>
+                      <div className={`${cx('avatar')} ${cx('checkout-icon')}`}>
+                        <div className={cx('avatar-title')}>
                           <i className="bx bxs-wallet-alt text-white font-size-20" />
                         </div>
                       </div>
-                      <div className="feed-item-list">
+                      <div className={cx('feed-item-list')}>
                         <div>
                           <h5 className="font-size-16 mb-1">Payment Info</h5>
-                          <p className="text-muted text-truncate mb-4">
+                          <p className={cx('text-truncate')}>
                             Duis arcu tortor, suscipit eget
                           </p>
                         </div>
@@ -305,7 +304,6 @@ const Checkout = () => {
                     size={BUTTON_SIZE.lg}
                     type={BUTTON_TYPE.primary}
                     href={HREF.home}
-                    className="btn btn-link text-muted"
                   >
                     <i className="mdi mdi-arrow-left me-1" /> Continue Shopping
                   </MyButton>
@@ -313,7 +311,6 @@ const Checkout = () => {
                 <div className="col">
                   <div className="text-end mt-2 mt-sm-0">
                     <MyButton
-                      className="btn btn-success"
                       type={BUTTON_TYPE.primary}
                       onClick={handleOnSubmitCreateOrder}
                     >
@@ -324,8 +321,8 @@ const Checkout = () => {
               </div>
             </div>
             <div className="col-xl-4">
-              <div className="card checkout-order-summary">
-                <div className="card-body">
+              <div className={cx('card') + ' ' + cx('checkout-order-summary')}>
+                <div className={cx('card-body')}>
                   <div className="p-3 bg-light mb-3">
                     <h5 className="font-size-16 mb-0">
                       Order Summary{' '}

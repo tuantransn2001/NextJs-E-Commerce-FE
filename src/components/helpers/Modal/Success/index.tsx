@@ -2,8 +2,8 @@
 import { BUTTON_TYPE } from '@/ts/enums/common';
 import { ObjectType } from '@/ts/types/common';
 import MyButton from '../../MyButton';
-import './style/Success.scss';
-
+import classNames from 'classnames/bind';
+const cx = classNames.bind(require('./style/Success.module.scss'));
 interface ModalSuccessProps {
   type: string;
   message?: string;
@@ -25,19 +25,19 @@ const ModalSuccess = ({
   handleOnSwitchNextAction,
 }: ModalSuccessProps) => {
   return (
-    <div className="myModal">
-      <div className="modal-dialog modal-confirm">
-        <div className="modal-content">
+    <div className={cx('myModal')}>
+      <div className={cx('modal-dialog modal-confirm')}>
+        <div className={cx('modal-content')}>
           <div
             style={{ background: COLOR[type] }}
-            className="modal-header justify-content-center"
+            className={cx('modal-header justify-content-center')}
           >
-            <div className="icon-box">
-              <i className="material-icons"></i>
+            <div className={cx('icon-box')}>
+              <i className={cx('material-icons')}></i>
             </div>
             <MyButton
               type={BUTTON_TYPE.primary}
-              className="close"
+              className={cx('close')}
               data-dismiss="modal"
               aria-hidden="true"
               onClick={handleOnClose}
@@ -45,7 +45,7 @@ const ModalSuccess = ({
               ×
             </MyButton>
           </div>
-          <div className="modal-body text-center">
+          <div className={cx('modal-body text-center')}>
             <h4>{type === 'success' ? 'Great' : 'Ooops'}!</h4>
             <p>
               {message
@@ -54,14 +54,14 @@ const ModalSuccess = ({
             </p>
             <MyButton
               type={BUTTON_TYPE.primary}
-              className="btn btn-success"
+              className={cx('btn btn-success')}
               data-dismiss="modal"
               onClick={handleOnSwitchNextAction}
             >
               <span>
                 {nextActionContent ? nextActionContent : `Start Exploring`}
               </span>{' '}
-              <i className="material-icons"></i>
+              <i className={cx('material-icons')}></i>
             </MyButton>
           </div>
         </div>

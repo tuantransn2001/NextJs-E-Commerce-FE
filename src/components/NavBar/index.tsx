@@ -16,19 +16,14 @@ const cx = classNames.bind(require('./style/NavBar.module.scss'));
 export default function NavBar({}) {
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const {
-    data: categories,
-    error,
-    isLoading,
-  } = useGet(API_PATH.getAllCategory, { page_number: 1, page_size: 5 });
-
-  const isNotOK: boolean =
-    isLoading || !isEmpty(error) || isEmpty(categories?.data);
-
-  if (isNotOK) {
+  const { data: categories, isLoading } = useGet(API_PATH.getAllCategory, {
+    page_number: 1,
+    page_size: 5,
+  });
+  if (isLoading || isEmpty(categories)) {
     return <LoadingScreen />;
   } else {
-    dispatch(dispatch(addCategories({ data: categories?.data })));
+    dispatch(addCategories({ data: categories?.data }));
     return (
       <div className={cx('nav-bg')}>
         <div className={cx('main-navigation')}>

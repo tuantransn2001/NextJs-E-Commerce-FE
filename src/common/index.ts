@@ -68,5 +68,13 @@ export const handleCalcCartTotal = (cartData: Cart | null) => {
     }, 0);
   }
 };
-
-export const handleGetHrefArr = () => window.location.href.split('/');
+function removeItemOnce(arr: any[], values: string[]) {
+  return arr.reduce((res, item) => {
+    if (!values.includes(item)) {
+      res.push(item);
+    }
+    return res;
+  }, []);
+}
+export const handleGetHrefArr = () =>
+  removeItemOnce(window.location.href.split('/'), ['']);
