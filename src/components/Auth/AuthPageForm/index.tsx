@@ -1,6 +1,5 @@
-/* eslint-disable import/extensions */
-import FormController from '@/components/helpers/formController';
 import MyButton from '@/components/helpers/myButton';
+import FormController from '@/components/helpers/formController';
 import { useLocalStorage, useTitle } from '@/customizes/hooks';
 import { authFormData } from '@/data/auth';
 import { AUTH_TYPE, BUTTON_TYPE } from '@/ts/enums/common';
