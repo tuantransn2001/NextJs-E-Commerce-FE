@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 import overviewImg from '../../assets/img/CategoryPage/overview_img.png';
+
 import banner from '../../assets/img/categoryPage/collections/banner.png';
 import { Brands } from './Brands/Brands';
 import classNames from 'classnames/bind';
