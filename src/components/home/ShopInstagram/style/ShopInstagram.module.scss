@@ -1,0 +1,27 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.sb-instagram {
+  @include flex-box(column, 2.5rem, none, none);
+}
+.sb-instagram-img-link-wrapper {
+  width: 100%;
+  .sb-instagram-img-wrapper {
+    padding-top: 100%;
+    position: relative;
+    .sb-instagram-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+  }
+}
+.sb-instagram-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  & p {
+    @include text-style(1.3rem, $normal, 1, 0, left, none, $white-color);
+  }
+}

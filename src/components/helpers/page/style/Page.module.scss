@@ -1,0 +1,26 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+
+// ? Page extends
+.page-container {
+  // ? Wrapped all element
+  .page-header {
+    padding: 4.2rem 0;
+    border-bottom: $border-style;
+    margin-bottom: 3rem;
+    .page-title {
+      @include text-style(
+        $fs-10,
+        $semi-bold,
+        1,
+        0.1rem,
+        center,
+        uppercase,
+        $primary-color
+      );
+    }
+  }
+  .page-body {
+    padding: 2rem;
+  }
+}

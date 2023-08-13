@@ -1,0 +1,51 @@
+@import '../../../sass/helpers/variable.scss';
+@import '../../../sass/helpers/mixin.scss';
+.nav-bg {
+  padding-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  border-bottom: $border-style;
+  .main-navigation {
+    width: 100%;
+    padding-bottom: 0.14rem;
+    margin: 0 auto;
+    .nav-list {
+      @include flex-box(row, 2rem, center, center);
+      .nav-item {
+        margin: 0 0.04rem;
+        .nav-content {
+          @include text-style(
+            $fs-3,
+            $semi-bold,
+            1.984,
+            0.14rem,
+            center,
+            uppercase,
+            $primary-color
+          );
+          transition: all ease 0.25s;
+        }
+
+        &:hover {
+          cursor: pointer;
+          .nav-content {
+            color: $red-1;
+          }
+          .sub-nav-bg {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}

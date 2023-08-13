@@ -1,0 +1,59 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+.feefo-widget-wrapper {
+  display: flex;
+  align-items: flex-start;
+  .feefo-widget-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    .feefo-widget-rare-wrapper {
+      .feefo-widget-rare-list {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 0.6rem;
+        & li svg {
+          font-size: 2.2rem;
+          color: $yellow-1;
+        }
+      }
+      .feefo-widget-rare-label {
+        @include text-style($fs-11, $medium, 1, 0.1rem, left, none, $black-1);
+        & strong {
+          font-weight: $bold;
+        }
+      }
+    }
+    .feefo-widget-rare-summer-text {
+      @include text-style(1.1rem, $normal, 1.8, 0, left, none, $gray-1);
+      & strong {
+        font-weight: $semi-bold;
+      }
+    }
+    .feefo-logo-wrapper {
+      width: 7rem;
+      height: 1.6rem;
+      .feefo-logo {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+      }
+    }
+    .feefo-all-review-link {
+      margin-top: 0.9rem;
+      width: max-content;
+      @include text-style($fs-2, $semi-bold, 1, 0, left, none, $blue-1);
+      text-decoration: none;
+    }
+  }
+  .feefo-award-img-wrapper {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    .feefo-award-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

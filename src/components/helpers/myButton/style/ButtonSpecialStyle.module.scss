@@ -1,0 +1,134 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+@import '../../../../sass/helpers/extend.scss';
+
+// ? -------- Size -----------
+.size-default {
+  padding: 0.7rem 1.4rem;
+  @include text-style(
+    $fs-1,
+    $normal,
+    $default-line-height,
+    $default-letter-spacing,
+    center,
+    capitalize,
+    $white-color
+  );
+}
+.size-small {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  @include text-style(
+    1.4rem,
+    $normal,
+    $default-line-height,
+    $letter-spacing-1,
+    center,
+    capitalize,
+    $white-color
+  );
+  .btn-content-with-text-only {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .btn-content-wrapper-with-icon-only {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+    & svg {
+      font-size: 1.1rem;
+      color: $white-color;
+    }
+  }
+  .btn-content-wrapper-with-icon {
+    padding-left: 1.2rem;
+    padding-right: 1.6rem;
+    @include flex-box(row, 0.4rem, center, none);
+    & svg {
+      font-size: 1.1rem;
+      color: $white-color;
+    }
+  }
+}
+.size-medium {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  @include text-style(
+    1.6rem,
+    $normal,
+    $default-line-height,
+    $letter-spacing-1,
+    center,
+    capitalize,
+    $white-color
+  );
+  .btn-content-with-text-only {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  .btn-content-wrapper-with-icon-only {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    & svg {
+      font-size: 1.4rem;
+      color: $white-color;
+    }
+  }
+  .btn-content-wrapper-with-icon {
+    padding-left: 2rem;
+    padding-right: 2.4rem;
+    @include flex-box(row, 0.8rem, center, none);
+    & svg {
+      font-size: 1.4rem;
+      color: $white-color;
+    }
+  }
+}
+.size-large {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  @include text-style(
+    1.6rem,
+    $normal,
+    $default-line-height,
+    $letter-spacing-1,
+    center,
+    capitalize,
+    $white-color
+  );
+  .btn-content-with-text-only {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+  .btn-content-wrapper-with-icon-only {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    & svg {
+      font-size: 1.5rem;
+      color: $white-color;
+    }
+  }
+  .btn-content-wrapper-with-icon {
+    padding-left: 2.4rem;
+    padding-right: 3.2rem;
+    @include flex-box(row, 0.8rem, center, none);
+    & svg {
+      font-size: 1.5rem;
+      color: $white-color;
+    }
+  }
+}
+.size-hug {
+  height: 4.6rem;
+}
+// ? -------- Shape -----------
+.primary-style {
+  background-color: $primary-color;
+}
+.view-basket {
+  background-color: transparent;
+  border: 0.2rem solid $border-color-1;
+  color: $primary-color;
+  &:hover {
+    color: $white-color;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../../sass/helpers/variable.scss';
+@import '../../../sass/helpers/extend.scss';
+.bg-wrapper {
+  .widget-elementor-bg {
+    width: 100%;
+    padding: 1rem;
+    background-color: $primary-color;
+    @extend .flex-center !optional;
+  }
+  .header {
+    padding: 2.8rem 0 0;
+  }
+}
