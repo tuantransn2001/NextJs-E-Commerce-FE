@@ -1,5 +1,5 @@
 {
-  "name": "typescript-nextjs-starter",
+  "name": "E-Commerce - Client",
   "description": "A TypeScript starter for Next.js that includes all you need to build amazing projects",
   "version": "1.0.0",
   "private": true,
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "next build",
-    "start": "next",
+    "start": "next start",
     "type-check": "tsc --noEmit",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
@@ -66,6 +66,7 @@
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.59.11",
     "@typescript-eslint/parser": "5.59.11",
+    "encoding": "0.1.13",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "eslint-config-prettier": "8.8.0",
