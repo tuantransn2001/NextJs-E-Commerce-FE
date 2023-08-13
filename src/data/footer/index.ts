@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
-import facebook_icon from '@/assets/img/socials/facebook_icon.png';
-import tiktok_icon from '@/assets/img/socials/tiktok_icon.png';
-import instagram_icon from '@/assets/img/socials/instagram_icon.png';
+import facebook_icon from '../../assets/img/socials/facebook_icon.png';
+import tiktok_icon from '../../assets/img/socials/tiktok_icon.png';
+import instagram_icon from '../../assets/img/socials/instagram_icon.png';
 
 export const content = {
   information: [

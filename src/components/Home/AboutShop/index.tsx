@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import React from 'react';
-import vvs_archive_product_logo from '@/assets/img/HomePage/aboutShop/vvs_archive_product_logo.png';
+import vvs_archive_product_logo from '../../../assets/img/HomePage/aboutShop/vvs_archive_product_logo.png';
 import MyButton from '@/components/helpers/MyButton';
 import Section from '@/components/helpers/Section';
 import classNames from 'classnames/bind';

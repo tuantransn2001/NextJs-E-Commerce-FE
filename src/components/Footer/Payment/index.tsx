@@ -1,4 +1,4 @@
-import payments from '@/assets/img/footer/payments/payments.png';
+import payments from '../../../assets/img/footer/payments/payments.png';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 const cx = classNames.bind(require('./style/Payment.module.scss'));

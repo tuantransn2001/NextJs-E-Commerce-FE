@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import React, { ChangeEvent, useState } from 'react';
 import Image from 'next/image';
-import payment_cards from '@/assets/img/Products/payment_cards.png';
+import payment_cards from '../../../assets/img/Products/payment_cards.png';
 import classNames from 'classnames/bind';
 import { Cart, Product, ProductVariant } from '@/domain/common';
 import MyButton from '@/components/helpers/MyButton';

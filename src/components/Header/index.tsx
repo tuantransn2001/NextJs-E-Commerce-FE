@@ -7,7 +7,7 @@ import {
   authIcon,
   cartIcon,
 } from '@/components/SVCIcon';
-import lenleys_main_logo from '@/assets/img/logo/lenleys_main_logo.png';
+import lenleys_main_logo from '../../assets/img/logo/lenleys_main_logo.png';
 import classNames from 'classnames/bind';
 import { BUTTON_TYPE, HREF } from '@/ts/enums/common';
 const cx = classNames.bind(require('./style/Header.module.scss'));

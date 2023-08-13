@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import copyright from '@/assets/img/footer/copyright/copyright.png';
+import copyright from '../../../assets/img/footer/copyright/copyright.png';
 import classNames from 'classnames/bind';
 import { copyRight } from '@/data/footer';
 import Image from 'next/image';

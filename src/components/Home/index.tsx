@@ -8,7 +8,7 @@ import ShopAddress from './ShopAddress';
 import ProductDelivery from './ProductDelivery';
 import AboutShop from './AboutShop';
 import ShopInstagram from './ShopInstagram';
-import banner from '@/assets/img/homePage/banner/banner.png';
+import banner from '../../assets/img/homePage/banner/banner.png';
 import { useTitle } from '@/customizes/hooks';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(require('./style/Home.module.scss'));

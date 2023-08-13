@@ -1,8 +1,6 @@
 /* eslint-disable import/extensions */
-import Image from 'next/image';
-import overviewImg from '@/assets/img/CategoryPage/overview_img.png';
-import banner from '@/assets/img/categoryPage/collections/banner.png';
-import { CategoryDTO } from '@/ts/dto/common.dto';
+import overviewImg from '../../assets/img/CategoryPage/overview_img.png';
+import banner from '../../assets/img/categoryPage/collections/banner.png';
 import { Brands } from './Brands/Brands';
 import classNames from 'classnames/bind';
 import MyButton from '../helpers/MyButton';
@@ -16,6 +14,7 @@ import {
   isEmpty,
 } from '@/common';
 import { API_PATH } from '@/ts/enums/api_enums';
+import Image from 'next/image';
 const cx = classNames.bind(require('./style/CategoryPage.module.scss'));
 
 interface SensationalProducts {

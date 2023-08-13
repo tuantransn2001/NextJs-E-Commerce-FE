@@ -1,12 +1,12 @@
-import product_1 from '@/assets/img/HomePage/productDelivery/product_delivery_1.png';
-import product_2 from '@/assets/img/HomePage/productDelivery/product_delivery_2.png';
-import product_3 from '@/assets/img/HomePage/productDelivery/product_delivery_3.png';
-import product_4 from '@/assets/img/HomePage/productDelivery/product_delivery_4.png';
+import product_1 from '../../assets/img/HomePage/productDelivery/product_delivery_1.png';
+import product_2 from '../../assets/img/HomePage/productDelivery/product_delivery_2.png';
+import product_3 from '../../assets/img/HomePage/productDelivery/product_delivery_3.png';
+import product_4 from '../../assets/img/HomePage/productDelivery/product_delivery_4.png';
 
-import linkImg1 from '@/assets/img/HomePage/shopInstagram/sbi_1.png';
-import linkImg2 from '@/assets/img/HomePage/shopInstagram/sbi_2.png';
-import linkImg3 from '@/assets/img/HomePage/shopInstagram/sbi_3.png';
-import linkImg4 from '@/assets/img/HomePage/shopInstagram/sbi_4.png';
+import linkImg1 from '../../assets/img/HomePage/shopInstagram/sbi_1.png';
+import linkImg2 from '../../assets/img/HomePage/shopInstagram/sbi_2.png';
+import linkImg3 from '../../assets/img/HomePage/shopInstagram/sbi_3.png';
+import linkImg4 from '../../assets/img/HomePage/shopInstagram/sbi_4.png';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const categoryQuickView = [
