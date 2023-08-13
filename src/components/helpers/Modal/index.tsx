@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import {
   Button,
   Modal,
@@ -34,33 +35,31 @@ const MyModal = ({
   const { onClose } = useDisclosure();
 
   return (
-    <>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay style={{ zIndex: 1 }} />
-        {type ? (
-          <ModalSuccess
-            type={type}
-            message={message}
-            nextActionContent={nextActionContent}
-            handleOnClose={handleOnClose}
-            handleOnSwitchNextAction={handleOnSwitchNextAction}
-          />
-        ) : (
-          <ModalContent>
-            <ModalHeader>{header}</ModalHeader>
-            <ModalBody>{body}</ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={handleOnClose}>
-                Close
-              </Button>
-              <Button onClick={handleOnSwitchNextAction} variant="ghost">
-                {nextActionContent ? nextActionContent : `Secondary Action`}
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        )}
-      </Modal>
-    </>
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay style={{ zIndex: 1 }} />
+      {type ? (
+        <ModalSuccess
+          type={type}
+          message={message}
+          nextActionContent={nextActionContent}
+          handleOnClose={handleOnClose}
+          handleOnSwitchNextAction={handleOnSwitchNextAction}
+        />
+      ) : (
+        <ModalContent>
+          <ModalHeader>{header}</ModalHeader>
+          <ModalBody>{body}</ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={handleOnClose}>
+              Close
+            </Button>
+            <Button onClick={handleOnSwitchNextAction} variant="ghost">
+              {nextActionContent ? nextActionContent : `Secondary Action`}
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      )}
+    </Modal>
   );
 };
 

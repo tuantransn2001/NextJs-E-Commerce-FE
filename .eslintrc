@@ -1,6 +1,9 @@
 {
   "plugins": ["prettier"],
-  "extends": ["next", "next/core-web-vitals", "prettier"],
+  "settings": {
+    "import/extensions": [".js", ".mjs", ".jsx", ".ts", ".tsx"]
+  },
+  "extends": ["next", "next/core-web-vitals", "prettier", "airbnb-typescript"],
   "rules": {
     "prettier/prettier": "error",
     "camelcase": "off",
@@ -13,10 +16,11 @@
       "error",
       "ignorePackages",
       {
-        "ts": "never",
-        "tsx": "never",
+        "": "never",
         "js": "never",
-        "jsx": "never"
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ],
     "jsx-a11y/anchor-is-valid": [
