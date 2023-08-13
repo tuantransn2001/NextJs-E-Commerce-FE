@@ -9,7 +9,7 @@ import { useGet, useGetURLParams } from '@/customizes/hooks';
 import Page from '../helpers/Page';
 import { Product, ProductVariant } from '@/domain/common';
 import Image from 'next/image';
-import { isEmpty } from '@/common';
+import { handleGetHrefArr, isEmpty } from '@/common';
 import { API_PATH } from '@/ts/enums/api_enums';
 import { useRouter } from 'next/router';
 const cx = classNames.bind(require('./style/ProductPage.module.scss'));
@@ -43,7 +43,9 @@ const Product = ({ data }: ProductProps) => {
 
 const ProductsPage = ({}) => {
   const [pageNumber, setPageNumber] = useState<number>(1);
-  const [title] = useGetURLParams();
+  const params = useGetURLParams();
+  const hrefTitle = handleGetHrefArr()[handleGetHrefArr().length - 1];
+
   const { data: products, isLoading } = useGet(
     API_PATH.getAllProduct,
     {
@@ -51,7 +53,7 @@ const ProductsPage = ({}) => {
       page_number: pageNumber,
     },
     {
-      title: title ? title : '',
+      title: params ? params[0] : hrefTitle,
     },
   );
 

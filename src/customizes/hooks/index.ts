@@ -8,7 +8,7 @@ import HttpException from '@/ts/utils/http.exception';
 import { useEffect, useState, useCallback } from 'react';
 import { useEventCallback, useEventListener } from 'usehooks-ts';
 import { useRouter } from 'next/router';
-import API from '@/services/common';
+import API from '@/services/common.service';
 export const useTitle = (title: string) => {
   useEffect(() => {
     title && (document.title = title);

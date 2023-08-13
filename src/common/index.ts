@@ -47,11 +47,8 @@ export const handleFormatTitleInCludeSpecChar = (
         .map((str) => capitalizeChar(str))
         .join(specChar)
     : '';
-
-  // return str.split();
 };
 
-// A wrapper for "JSON.parse()"" to support "undefined" value
 export function parseJSON<T>(value: string | null): T | undefined {
   try {
     return value === 'undefined' ? undefined : JSON.parse(value ?? '');
@@ -71,3 +68,5 @@ export const handleCalcCartTotal = (cartData: Cart | null) => {
     }, 0);
   }
 };
+
+export const handleGetHrefArr = () => window.location.href.split('/');

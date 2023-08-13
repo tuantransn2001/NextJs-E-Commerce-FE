@@ -14,7 +14,6 @@ import {
   isEmpty,
 } from '@/common';
 import classNames from 'classnames/bind';
-import { useDispatch } from 'react-redux';
 const cx = classNames.bind(require('./style/AuthPageForm.module.scss'));
 
 interface AuthFormProps {
@@ -68,7 +67,6 @@ const switchForm = (
 };
 
 export default function AuthPageForm({ formType, setFormType }: AuthFormProps) {
-  const dispatch = useDispatch();
   const [_, setAccessToken] = useLocalStorage('access_token', '');
   const [err, setErr] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);

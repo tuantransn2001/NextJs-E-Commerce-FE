@@ -3,24 +3,16 @@
 import Page from '../helpers/Page';
 import './style/Cart.scss';
 import Image from 'next/image';
-import { useGet } from '../../customizes/hooks';
-import { API_PATH, RESPONSE_STATUS } from '@/ts/enums/api_enums';
+import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import { useDispatch, useSelector } from 'react-redux';
-import { isAuthSelector, userSelector } from '@/redux/slice/auth.slice';
-import LoadingScreen from '../helpers/LoadingScreen';
+import { isAuthSelector } from '@/redux/slice/auth.slice';
 import { handleCalcCartTotal, isEmpty } from '@/common';
 import MyButton from '@/components/helpers/MyButton';
 import { Cart, CartItem } from '@/domain/common';
 import { BUTTON_SIZE, BUTTON_TYPE, HREF } from '@/ts/enums/common';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faMinus,
-  faPlus,
-  faTrash,
-  faX,
-  faXmark,
-} from '@fortawesome/free-solid-svg-icons';
-import { useCallback, useEffect, useState } from 'react';
+import { faMinus, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useCallback, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import {

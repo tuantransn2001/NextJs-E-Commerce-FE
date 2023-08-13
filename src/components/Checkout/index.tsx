@@ -200,15 +200,14 @@ const Checkout = () => {
               </div>
             </label>
             <div className="edit-btn bg-light rounded">
-              <a
-                href="#"
+              <span
                 data-bs-toggle="tooltip"
                 data-placement="top"
                 title=""
                 data-bs-original-title="Edit"
               >
                 <i className="bx bx-pencil font-size-16" />
-              </a>
+              </span>
             </div>
           </div>
         </div>

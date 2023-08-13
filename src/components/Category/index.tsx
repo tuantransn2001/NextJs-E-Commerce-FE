@@ -7,12 +7,12 @@ import { Brands } from './Brands/Brands';
 import classNames from 'classnames/bind';
 import MyButton from '../helpers/MyButton';
 import LoadingScreen from '../helpers/LoadingScreen';
-import { useGet } from '@/customizes/hooks';
+import { useGet, useGetURLParams } from '@/customizes/hooks';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 import { Product, ProductVariant } from '@/domain/common';
 import {
-  capitalize,
   handleFormatTitleInCludeSpecChar,
+  handleGetHrefArr,
   isEmpty,
 } from '@/common';
 import { API_PATH } from '@/ts/enums/api_enums';
@@ -172,13 +172,16 @@ const Collection = ({}) => {
   );
 };
 
-interface CategoryPageProps {
-  data: CategoryDTO;
-}
-
-const Category = ({ data }: CategoryPageProps) => {
+const Category = ({}) => {
+  const params = useGetURLParams();
+  const hrefID = handleGetHrefArr()[handleGetHrefArr().length - 1];
+  const { data, isLoading } = useGet(API_PATH.getOneCategory, {
+    id: params ? params[0] : hrefID,
+  });
   const { title, subTitle, description } = data;
-  return (
+  return isLoading || !hrefID || !params ? (
+    <LoadingScreen />
+  ) : (
     <div className={cx('category-wrapper')}>
       <div className={`${cx('category-overview-wrapper')}`}>
         <div className={`${cx('category-overview')} grid wide`}>
