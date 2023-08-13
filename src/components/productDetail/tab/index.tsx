@@ -1,5 +1,7 @@
+/* eslint-disable import/extensions */
 import { ObjectType, SetValue } from '@/ts/types/common';
 import { useState } from 'react';
+
 const tabListStyle = {
   display: 'flex',
   alignItems: 'center',

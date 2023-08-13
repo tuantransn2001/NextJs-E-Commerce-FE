@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import { ChangeEventHandler } from 'react';
-import './style/MySelect.scss';
-
+import classNames from 'classnames/bind';
+const cx = classNames.bind(require('./style/MySelect.module.scss'));
 interface MySelectProps {
   placeholder: string;
   options: { id: string; content: string }[];
@@ -10,7 +10,7 @@ interface MySelectProps {
 
 const MySelect = ({ placeholder, options, onChange }: MySelectProps) => {
   return (
-    <div className="select-dropdown">
+    <div className={cx('select-dropdown')}>
       <select placeholder={placeholder} onChange={onChange}>
         {options.map((p) => (
           <option value={p.id} key={p.content}>

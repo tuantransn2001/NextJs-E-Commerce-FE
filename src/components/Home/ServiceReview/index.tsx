@@ -4,7 +4,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import ReviewCarousel from './ReviewCarousel';
 import feefoLogo from '../../../assets/img/homePage/serviceReview/feefo-logo.png';
 import feefoAwardImg from '../../../assets/img/homePage/serviceReview/feefo-award-plentium.png';
-import Section from '@/components/helpers/Section';
+import Section from '@/components/helpers/section';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 const cx = classNames.bind(require('./style/ServiceReview.module.scss'));

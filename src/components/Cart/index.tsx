@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/extensions */
-import Page from '../helpers/Page';
+import Page from '../helpers/page';
 import Image from 'next/image';
 import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import { useDispatch, useSelector } from 'react-redux';
 import { isAuthSelector } from '@/redux/slice/auth.slice';
 import { handleCalcCartTotal, isEmpty } from '@/common';
-import MyButton from '@/components/helpers/MyButton';
+import MyButton from '@/components/helpers/myButton';
 import { Cart, CartItem } from '@/domain/common';
 import { BUTTON_SIZE, BUTTON_TYPE, HREF } from '@/ts/enums/common';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,7 +21,7 @@ import {
   removeItem,
   setCart,
 } from '@/redux/slice/cart.slice';
-import MyModal from '../helpers/Modal';
+import MyModal from '../helpers/modal';
 import { ObjectType, ResponseAttributes } from '@/ts/types/common';
 import { addProductToCartDeepChecker } from '@/ts/utils/dataDeepChecker';
 import { AddProductToCartDTO, ProductCartDTO } from '@/ts/dto/common.dto';

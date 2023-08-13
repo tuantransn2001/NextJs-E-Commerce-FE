@@ -1,11 +1,11 @@
 /* eslint-disable import/extensions */
-import Section from '@/components/helpers/Section';
-import MyButton from '@/components/helpers/MyButton';
+import Section from '@/components/helpers/section';
+import MyButton from '@/components/helpers/myButton';
 import { shopInstagram } from '@/data/home';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
-import { instagramIcon } from '@/components/SVCIcon';
+import { instagramIcon } from '@/components/svgIcon';
 const cx = classNames.bind(require('./style/ShopInstagram.module.scss'));
 
 const SBInstagram = ({}) => {

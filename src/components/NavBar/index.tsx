@@ -2,10 +2,10 @@
 /* eslint-disable import/extensions */
 import { useGet } from '@/customizes/hooks';
 import { API_PATH } from '@/ts/enums/api_enums';
-import LoadingScreen from '../helpers/LoadingScreen';
+import LoadingScreen from '../helpers/loadingScreen';
 import classNames from 'classnames/bind';
 import { CategoryDTO } from '@/ts/dto/common.dto';
-import MyButton from '../helpers/MyButton';
+import MyButton from '../helpers/myButton';
 import { BUTTON_TYPE } from '@/ts/enums/common';
 import { useAppDispatch } from '@/redux/store';
 import { addCategories } from '@/redux/slice/app.slice';

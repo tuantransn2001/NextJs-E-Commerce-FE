@@ -1,9 +1,9 @@
 /* eslint-disable import/extensions */
 import { store } from '@/redux/store';
-import HomeTemplate from '@/templates/Home';
+import HomeTemplate from '@/templates/home';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
-import GlobalStyle from '@/components/helpers/GlobalStyle';
+import GlobalStyle from '@/components/helpers/globalStyle';
 import '../sass/base/reset.scss';
 import '../sass/layouts/grid.scss';
 import '../sass/helpers/variable.scss';

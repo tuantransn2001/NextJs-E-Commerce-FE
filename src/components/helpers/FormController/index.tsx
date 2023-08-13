@@ -4,7 +4,7 @@ import { Field, IFormInput } from '@/ts/types/common';
 import { UseFormRegister } from 'react-hook-form';
 import { capitalizeChar } from '@/common';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import MyButton from '../MyButton';
+import MyButton from '../myButton';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(require('./style/FormController.module.scss'));
 interface FormControllerProps {

@@ -8,7 +8,7 @@ import {
   ModalOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
-import ModalSuccess from './Success';
+import ModalSuccess from './success';
 
 interface MyModalProps {
   isOpen: boolean;

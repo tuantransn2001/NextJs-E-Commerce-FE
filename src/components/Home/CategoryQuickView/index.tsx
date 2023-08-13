@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import MyButton from '@/components/helpers/MyButton';
+import MyButton from '@/components/helpers/myButton';
 import classNames from 'classnames/bind';
 import { BUTTON_TYPE } from '@/ts/enums/common';
 import { categoryQuickView } from '@/data/home';

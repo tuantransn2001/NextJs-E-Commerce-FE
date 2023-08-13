@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/extensions */
 import { WrapperComponentProps } from '@/ts/interfaces/common';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import NavBar from '@/components/NavBar';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import NavBar from '@/components/navBar';
 import { useState, useEffect, useCallback } from 'react';
 import { useLocalStorage } from '@/customizes/hooks';
 import AuthService from '@/services/auth.service';

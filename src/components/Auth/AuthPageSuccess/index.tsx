@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
-import MyButton from '@/components/helpers/MyButton';
+import MyButton from '@/components/helpers/myButton';
 import { authSuccessStatusContent } from '@/data/auth';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 const cx = classNames.bind(require('./style/AuthPageSuccess.module.scss'));

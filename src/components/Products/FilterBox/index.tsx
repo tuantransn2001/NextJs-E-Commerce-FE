@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-proptypes */
 import React from 'react';
 import { Select } from '@chakra-ui/react';
 import {

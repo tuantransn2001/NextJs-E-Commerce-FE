@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import StyledComponentsRegistry from '@/components/helpers/GlobalStyle';
+import StyledComponentsRegistry from '@/components/helpers/globalStyle';
 export default function RootLayout({
   children,
 }: {

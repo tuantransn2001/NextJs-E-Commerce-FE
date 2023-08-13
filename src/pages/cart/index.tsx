@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import { NextPage } from 'next';
-import Cart from '@/components/Cart';
+import Cart from '@/components/cart';
 
 const CartPage: NextPage = () => <Cart />;
 

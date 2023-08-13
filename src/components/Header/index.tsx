@@ -1,12 +1,12 @@
 /* eslint-disable import/extensions */
-import MyButton from '../helpers/MyButton';
+import MyButton from '../helpers/myButton';
 import Image from 'next/image';
 import {
   viewStoreIcon,
   searchIcon,
   authIcon,
   cartIcon,
-} from '@/components/SVCIcon';
+} from '@/components/svgIcon';
 import lenleys_main_logo from '../../assets/img/logo/lenleys_main_logo.png';
 import classNames from 'classnames/bind';
 import { BUTTON_TYPE, HREF } from '@/ts/enums/common';

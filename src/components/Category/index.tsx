@@ -2,10 +2,10 @@
 import overviewImg from '../../assets/img/categoryPage/overviewImg.png';
 
 import banner from '../../assets/img/categoryPage/collections/banner.png';
-import { Brands } from './Brands/Brands';
+import { Brands } from './brands/Brands';
 import classNames from 'classnames/bind';
-import MyButton from '../helpers/MyButton';
-import LoadingScreen from '../helpers/LoadingScreen';
+import MyButton from '../helpers/myButton';
+import LoadingScreen from '../helpers/loadingScreen';
 import { useGet, useGetURLParams } from '@/customizes/hooks';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 import { Product, ProductVariant } from '@/domain/common';

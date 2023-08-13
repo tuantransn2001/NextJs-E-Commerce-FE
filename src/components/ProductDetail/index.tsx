@@ -1,12 +1,12 @@
 /* eslint-disable import/extensions */
 import React from 'react';
-import ProductDesc from './ProductDesc';
+import ProductDesc from './productDesc';
 
 import classNames from 'classnames/bind';
 import { useGet, useGetURLParams } from '@/customizes/hooks';
-import Page from '../helpers/Page';
+import Page from '../helpers/page';
 import { API_PATH } from '@/ts/enums/api_enums';
-import LoadingScreen from '../helpers/LoadingScreen';
+import LoadingScreen from '../helpers/loadingScreen';
 import { handleGetHrefArr, isEmpty } from '@/common';
 const cx = classNames.bind(require('./style/ProductDetailPage.module.scss'));
 

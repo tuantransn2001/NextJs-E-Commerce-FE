@@ -1,8 +1,8 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import vvs_archive_product_logo from '../../../assets/img/homePage/aboutShop/vvs_archive_product_logo.png';
-import MyButton from '@/components/helpers/MyButton';
-import Section from '@/components/helpers/Section';
+import MyButton from '@/components/helpers/myButton';
+import Section from '@/components/helpers/section';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';

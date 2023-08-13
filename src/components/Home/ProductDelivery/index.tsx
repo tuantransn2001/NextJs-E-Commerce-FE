@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import Section from '@/components/helpers/Section';
+import Section from '@/components/helpers/section';
 import Image from 'next/image';
 import { productDelivery } from '@/data/home';
 import classNames from 'classnames/bind';

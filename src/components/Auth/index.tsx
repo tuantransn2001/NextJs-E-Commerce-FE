@@ -1,8 +1,8 @@
 /* eslint-disable import/extensions */
 import { useState } from 'react';
 import { AUTH_TYPE } from '@/ts/enums/common';
-import AuthPageForm from '@/components/Auth/AuthPageForm';
-import AuthPageSuccess from '@/components/Auth/AuthPageSuccess';
+import AuthPageForm from '@/components/auth/authPageForm';
+import AuthPageSuccess from '@/components/auth/authPageSuccess';
 import { useSelector } from 'react-redux';
 import { isAuthSelector } from '@/redux/slice/auth.slice';
 

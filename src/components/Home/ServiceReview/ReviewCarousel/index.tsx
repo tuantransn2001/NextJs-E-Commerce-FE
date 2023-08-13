@@ -3,7 +3,7 @@ import React from 'react';
 
 import UserFeedBack from './UserFeedBack';
 import { userFeedbacksData } from '@/data/home';
-import SwiperCarousel from '@/components/helpers/SwipperCarousel';
+import SwiperCarousel from '@/components/helpers/swipperCarousel';
 
 const userFeedBackArr = () => {
   return userFeedbacksData.map((feedBack, index) => {

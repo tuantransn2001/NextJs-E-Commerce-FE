@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
-import SwiperCarousel from '@/components/helpers/SwipperCarousel';
-import Brand from './Brand';
+import SwiperCarousel from '@/components/helpers/swipperCarousel';
+import Brand from './brand';
 
 import classNames from 'classnames/bind';
 import { brandsImgSrc } from '@/data/brands';

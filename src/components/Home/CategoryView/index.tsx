@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import Section from '@/components/helpers/Section';
+import Section from '@/components/helpers/section';
 import { categoriesSelector } from '@/redux/slice/app.slice';
 import classNames from 'classnames/bind';
 import Image from 'next/image';

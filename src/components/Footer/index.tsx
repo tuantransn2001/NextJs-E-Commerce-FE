@@ -1,9 +1,9 @@
 import classNames from 'classnames/bind';
-import Content from './Content';
-import Subscribe from './Subscribe';
-import Payment from './Payment';
-import Copyright from './Copyright';
-import FooterLogo from './Logo';
+import Content from './content';
+import Subscribe from './subscribe';
+import Payment from './payment';
+import Copyright from './copyright';
+import FooterLogo from './logo';
 const cx = classNames.bind(require('./style/Footer.module.scss'));
 export default function Footer({}) {
   return (

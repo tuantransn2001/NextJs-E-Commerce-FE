@@ -1,9 +1,9 @@
 /* eslint-disable import/extensions */
-import Banner from './Banner';
-import ShopStories from './ShopStories';
-import Contact from './Contact';
+import Banner from './banner';
+import ShopStories from './shopStories';
+import Contact from './contact';
 import { lenleysStoriesData } from '@/data/shopInformation';
-import Page from '../helpers/Page';
+import Page from '../helpers/page';
 
 const renderStorySections = () => {
   return lenleysStoriesData.map((lenleysStoryData, index) => {

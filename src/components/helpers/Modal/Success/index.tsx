@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import { BUTTON_TYPE } from '@/ts/enums/common';
 import { ObjectType } from '@/ts/types/common';
-import MyButton from '../../MyButton';
+import MyButton from '../../myButton';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(require('./style/Success.module.scss'));
 interface ModalSuccessProps {

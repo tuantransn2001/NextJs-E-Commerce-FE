@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
-import MyButton from '@/components/helpers/MyButton';
-import { footerLogo } from '@/components/SVCIcon';
+import MyButton from '@/components/helpers/myButton';
+import { footerLogo } from '@/components/svgIcon';
 import { BUTTON_TYPE } from '@/ts/enums/common';
 export default function FooterLogo({}) {
   return (

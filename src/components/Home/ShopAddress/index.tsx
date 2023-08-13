@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import Section from '@/components/helpers/Section';
+import Section from '@/components/helpers/section';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(require('./style/ShopAddress.module.scss'));
 

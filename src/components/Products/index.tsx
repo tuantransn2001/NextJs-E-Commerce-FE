@@ -1,12 +1,12 @@
 /* eslint-disable import/extensions */
 import React, { useState } from 'react';
-import FilterBox from './FilterBox';
-import ProductSorting from './ProductSorting';
-import LoadingScreen from '../helpers/LoadingScreen';
-import PaginatedItems from '../Pagination';
+import FilterBox from './filterBox';
+import ProductSorting from './productSorting';
+import LoadingScreen from '../helpers/loadingScreen';
+import PaginatedItems from '../pagination';
 import classNames from 'classnames/bind';
 import { useGet, useGetURLParams } from '@/customizes/hooks';
-import Page from '../helpers/Page';
+import Page from '../helpers/page';
 import { Product, ProductVariant } from '@/domain/common';
 import Image from 'next/image';
 import { handleGetHrefArr, isEmpty } from '@/common';
