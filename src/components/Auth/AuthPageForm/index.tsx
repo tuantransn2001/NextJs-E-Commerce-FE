@@ -67,7 +67,7 @@ const switchForm = (
 };
 
 export default function AuthPageForm({ formType, setFormType }: AuthFormProps) {
-  const [_, setAccessToken] = useLocalStorage('access_token', '');
+  const setAccessToken = useLocalStorage('access_token', '')[1];
   const [err, setErr] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   useTitle('My Account - Lenleys');
