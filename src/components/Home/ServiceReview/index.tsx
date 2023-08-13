@@ -2,8 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import ReviewCarousel from './ReviewCarousel';
-import feefoLogo from '../../../assets/img/HomePage/serviceReview/feefo-logo.png';
-import feefoAwardImg from '../../../assets/img/HomePage/serviceReview/feefo-award-plentium.png';
+import feefoLogo from '../../../assets/img/homePage/serviceReview/feefo-logo.png';
+import feefoAwardImg from '../../../assets/img/homePage/serviceReview/feefo-award-plentium.png';
 import Section from '@/components/helpers/Section';
 import classNames from 'classnames/bind';
 import Image from 'next/image';

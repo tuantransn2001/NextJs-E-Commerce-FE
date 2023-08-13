@@ -1,9 +1,9 @@
-import Asiatic from '../../assets/img/Brands/Asiatic.png';
-import Bronte from '../../assets/img/Brands/Bronte.png';
-import CrucialTrading from '../../assets/img/Brands/CrucialTrading.png';
-import Jacaranda from '../../assets/img/Brands/Jacaranda.png';
-import Karndean from '../../assets/img/Brands/Karndean.png';
-import Ulster from '../../assets/img/Brands/Ulster.png';
+import Asiatic from '../../assets/img/brands/Asiatic.png';
+import Bronte from '../../assets/img/brands/Bronte.png';
+import CrucialTrading from '../../assets/img/brands/CrucialTrading.png';
+import Jacaranda from '../../assets/img/brands/Jacaranda.png';
+import Karndean from '../../assets/img/brands/Karndean.png';
+import Ulster from '../../assets/img/brands/Ulster.png';
 
 export const brandsImgSrc = [
   Asiatic,
