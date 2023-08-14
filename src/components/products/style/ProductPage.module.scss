@@ -1,0 +1,35 @@
+@import '../../../sass/helpers/variable.scss';
+@import '../../../sass/helpers/mixin.scss';
+
+.product-wrapper {
+  @include flex-box(column, none, center, none);
+  .product-img-link-wrapper {
+    width: 30rem;
+    height: 30rem;
+    display: block;
+    margin-bottom: 2.5rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .product-name {
+    margin-bottom: 1.5rem;
+    @include text-style(
+      $fs-4,
+      $semi-bold,
+      none,
+      none,
+      center,
+      uppercase,
+      rgba($color: $black-2, $alpha: 0.7)
+    );
+  }
+  .product-price {
+    @include text-style($fs-3, $normal, none, none, center, none, $black-6);
+  }
+}

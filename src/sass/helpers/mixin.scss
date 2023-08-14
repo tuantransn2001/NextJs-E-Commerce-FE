@@ -1,0 +1,16 @@
+@mixin text-style($fs, $fw, $lh, $lc, $t-al, $text-tranform, $cl) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $lc;
+  text-align: $t-al;
+  text-transform: $text-tranform;
+  color: $cl;
+}
+@mixin flex-box($flex-direction, $gap, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  gap: $gap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

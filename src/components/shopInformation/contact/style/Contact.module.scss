@@ -1,0 +1,7 @@
+@import "../../../../sass/helpers/mixin.scss";
+.infor-contact-wrapper {
+  padding: 5.4rem 0;
+  .infor-contact-content {
+    @include flex-box(column, 1.4rem, center, none);
+  }
+}

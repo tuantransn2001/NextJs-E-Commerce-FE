@@ -1,0 +1,100 @@
+// ? Color:
+// ? ===> HEX
+$primary-color: #272525;
+$admin-primary-color: #1572e8;
+$black-color: #000000;
+$black-1: #00240f;
+$black-2: #262626;
+$black-3: #484545;
+$black-4: #111111;
+$black-5: #414357;
+$black-6: #2b2b2b;
+$black-7: #242934;
+$black-8: #404d61;
+$white-color: #ffffff;
+$white-1: #f5f5f5;
+$white-2: #ebf0fd;
+$white-3: #f4f5fa;
+$white-4: #f3f6f9;
+$white-5: #f6f7fb;
+$white-6: #f1f2f3;
+$red-1: #c20114;
+$red-2: #f30000;
+$yellow-1: #ffd000;
+$gray-1: #9b9898;
+$gray-2: #a0a1ab;
+$gray-3: #f8f8f8;
+$gray-4: #adb5bd;
+$gray-5: #e9ecef;
+$gray-6: #757d8a;
+$gray-7: #5a6474;
+$gray-8: #757d8a;
+$gray-9: #a9a9a9;
+$blue-1: #0088c1;
+$blue-2: #408bd1;
+$blue-3: #29335d;
+$blue-4: #3167eb;
+$blue-5: #144339;
+$green-1: #95c11f;
+$green-2: #05d34e;
+$pruple-1: #4d2775;
+$purple-2: #67349d;
+// ? ===> RGBA
+$rgba-black-1: rgba(58, 53, 65, 0.87);
+// * --- Border
+$border-color-1: rgba(108, 117, 125, 0.25);
+$border-color: #414357;
+$border-section: #d9dddb;
+$border-style: 0.1rem solid
+  rgba(
+    $color: $primary-color,
+    $alpha: 0.4,
+  );
+// ? Font size
+// * ---- common ----
+$fs-1: 1.12rem;
+$fs-2: 1.26rem;
+$fs-3: 1.386rem;
+$fs-4: 1.4rem;
+$fs-5: 1.512rem;
+$fs-6: 1.6rem;
+$fs-7: 1.67958rem;
+$fs-8: 2.016rem;
+$fs-9: 2.394rem;
+$fs-10: 2.772rem;
+$fs-11: 2.8rem;
+$fs-12: 3.3264rem;
+$fs-13: 3.2492rem;
+// * ---- special ----
+$sub-nav-fs: 1.16rem;
+// ? Font weight
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+// ? Z-Index
+$index-min: -999;
+$index-1: 1;
+$index-2: 2;
+$index-3: 3;
+$index-4: 4;
+$index-5: 5;
+$index-max: 999;
+// ? Border-radius
+$default-border-radius: 0.4rem;
+$border-radius-1: 1.2rem;
+$border-radius-2: 1.5rem;
+// ? Line heigh
+$default-line-height: 1;
+// ? Letter spacing
+$default-letter-spacing: 0;
+$letter-spacing-1: 0.05rem;
+$letter-spacing-2: 0.1rem;
+$letter-spacing-3: 0.12rem;
+$letter-spacing-4: 0.14rem;
+$letter-spacing-5: 0.14rem;
+$letter-spacing-6: 2rem;
+// ? Size
+$aside-slidebar-width: 26rem;
+// ? Box Shadow
+$box-shadow-1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

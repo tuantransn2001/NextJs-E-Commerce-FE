@@ -1,0 +1,11 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+
+.wrapper {
+  max-width: 100vw !important;
+  height: 58.4rem;
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+}

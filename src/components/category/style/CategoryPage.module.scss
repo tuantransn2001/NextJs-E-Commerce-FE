@@ -1,0 +1,133 @@
+@import '../../../sass/helpers/variable.scss';
+@import '../../../sass/helpers/mixin.scss';
+@import '../../../sass/helpers/extend.scss';
+
+$category-overview-height: 42rem;
+.category-wrapper {
+  .category-overview-wrapper {
+    background-color: #d9c9c3;
+    height: $category-overview-height;
+    .category-overview {
+      height: $category-overview-height;
+      .category-overview-content {
+        width: 100%;
+        @include flex-box(column, 1.2rem, flex-start, center);
+        padding: 5.4rem 8.4rem 5.4rem 0;
+        .category-overview-strong-text {
+          display: block;
+          width: 100%;
+          background-color: $red-1;
+          & h2 {
+            text-align: center;
+            color: $white-color;
+          }
+        }
+        .category-view-shop-quick-btn-content {
+          @include text-style(
+            $fs-2,
+            $semi-bold,
+            1,
+            0.1rem,
+            center,
+            uppercase,
+            $white-color
+          );
+        }
+      }
+      .category-img-wrapper {
+        display: block;
+        width: 100%;
+        height: $category-overview-height;
+        .category-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .category-sensational-products-wrapper {
+    .category-sensational-product {
+      padding: 8.4rem 0;
+      .categroy-sesational-products-content {
+        @include flex-box(column, 2.4rem, center, none);
+        & p,
+        h6 {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .category-sensational-products-detail-wrapper {
+    padding: 0 2.1rem 2.1rem;
+    .category-sensational-products-detail-img-wrapper {
+      width: 100%;
+      display: block;
+      .category-sensational-products-detail-img-square-shape {
+        padding-bottom: 100%;
+        position: relative;
+        .category-sensational-products-detail-img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .category-sensational-products-detail-name {
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  .category-sesational-view-products-btn-content {
+    @include text-style(
+      $fs-2,
+      $semi-bold,
+      1,
+      0.1rem,
+      center,
+      uppercase,
+      $white-color
+    );
+  }
+  .category-colection-wrapper {
+    padding: 4.2rem;
+
+    .category-collection-content-wrapper {
+      @include flex-box(column, 2rem, flex-start, none);
+      & h3 {
+        display: block;
+        width: 100%;
+        position: relative;
+        &::after {
+          content: '';
+          width: 90%;
+          height: 0.1rem;
+          background-color: $primary-color;
+          position: absolute;
+          top: calc(100% + 0.8rem);
+          left: 0;
+        }
+      }
+    }
+    .category-collection-banner-link-wrapper {
+      display: block;
+      width: 100%;
+      height: 40rem;
+      .category-collection-banner-link-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .category-view-collection-btn-content {
+      @include text-style(
+        $fs-2,
+        $semi-bold,
+        1,
+        0.12rem,
+        center,
+        uppercase,
+        $white-color
+      );
+    }
+  }
+}
