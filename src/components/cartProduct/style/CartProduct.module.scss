@@ -1,0 +1,14 @@
+@import '../../../sass/helpers/mixin.scss';
+@import '../../../sass/helpers/variable.scss';
+.item-wrapper {
+  @include flex-box(row, 0.4rem, center, none);
+  margin-bottom: 1.2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.item-img {
+  border: 0.1rem solid $primary-color;
+  width: 4rem;
+  height: 4rem;
+}

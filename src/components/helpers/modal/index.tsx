@@ -15,6 +15,10 @@ interface MyModalProps {
   isOpen: boolean;
   header?: JSX.Element;
   body?: JSX.Element;
+<<<<<<< HEAD
+=======
+  footer?: JSX.Element;
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
   type?: string;
   message?: string;
   nextActionContent?: string;
@@ -29,6 +33,10 @@ const MyModal = ({
   isOpen,
   header,
   body,
+<<<<<<< HEAD
+=======
+  footer,
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
   handleOnClose,
   handleOnSwitchNextAction,
 }: MyModalProps) => {
@@ -49,6 +57,7 @@ const MyModal = ({
         <ModalContent>
           <ModalHeader>{header}</ModalHeader>
           <ModalBody>{body}</ModalBody>
+<<<<<<< HEAD
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={handleOnClose}>
               Close
@@ -57,6 +66,20 @@ const MyModal = ({
               {nextActionContent ? nextActionContent : `Secondary Action`}
             </Button>
           </ModalFooter>
+=======
+          {footer ? (
+            footer
+          ) : (
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={handleOnClose}>
+                Close
+              </Button>
+              <Button onClick={handleOnSwitchNextAction} variant="ghost">
+                {nextActionContent ? nextActionContent : `Secondary Action`}
+              </Button>
+            </ModalFooter>
+          )}
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
         </ModalContent>
       )}
     </Modal>

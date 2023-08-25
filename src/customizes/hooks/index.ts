@@ -9,6 +9,10 @@ import { useEffect, useState, useCallback } from 'react';
 import { useEventCallback, useEventListener } from 'usehooks-ts';
 import { useRouter } from 'next/router';
 import API from '@/services/common.service';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 export const useTitle = (title: string) => {
   useEffect(() => {
     title && (document.title = title);
@@ -25,7 +29,11 @@ export const useGet = (
   const [error, setError] = useState<any>({});
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+<<<<<<< HEAD
   const handleGetData = async () => {
+=======
+  const handleGetData = useCallback(async () => {
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
     try {
       const getResult: ResponseAttributes = (await API.getModelRecordPage(url, {
         id,
@@ -52,7 +60,11 @@ export const useGet = (
         error: { message } as HttpException,
       });
     }
+<<<<<<< HEAD
   };
+=======
+  }, []);
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 
   useEffect(() => {
     setIsLoading(true);

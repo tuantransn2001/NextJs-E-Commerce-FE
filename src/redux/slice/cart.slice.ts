@@ -1,5 +1,9 @@
 /* eslint-disable import/extensions */
+<<<<<<< HEAD
 import { Cart } from '@/domain/common';
+=======
+import { Cart } from '@/ts/types/cart.type';
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 

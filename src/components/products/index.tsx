@@ -7,7 +7,11 @@ import PaginatedItems from '../pagination';
 import classNames from 'classnames/bind';
 import { useGet, useGetURLParams } from '@/customizes/hooks';
 import Page from '../helpers/page';
+<<<<<<< HEAD
 import { Product, ProductVariant } from '@/domain/common';
+=======
+import { Product, ProductVariant } from '@/ts/types/product.type';
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 import Image from 'next/image';
 import { handleGetHrefArr, isEmpty } from '@/common';
 import { API_PATH } from '@/ts/enums/api_enums';
@@ -71,12 +75,15 @@ const ProductsPage = ({}) => {
       <section className="page-body grid wide">
         <div className="row mb-4-2">
           <div className="c-12 gutter">
+<<<<<<< HEAD
             <FilterBox />
           </div>
         </div>
 
         <div className="row mb-4-2">
           <div className="c-12 gutter">
+=======
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
             <ProductSorting itemPerPage={8} itemLength={products?.length} />
           </div>
         </div>
@@ -92,3 +99,8 @@ const ProductsPage = ({}) => {
 };
 
 export default ProductsPage;
+<<<<<<< HEAD
+=======
+
+// TODO: Handle Filter box ...
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba

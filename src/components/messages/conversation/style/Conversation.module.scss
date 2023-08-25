@@ -1,0 +1,95 @@
+@import '../../../../sass/helpers/mixin.scss';
+@import '../../../../sass/helpers/variable.scss';
+.messages-chat-wrapper {
+  height: 35.8rem;
+  overflow-y: scroll;
+}
+.chat-panel {
+  padding: 1rem 0;
+}
+.chat-input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+
+  &::placeholder {
+    color: #e3e3e3;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.friend-drawer {
+  @include flex-box(row, 0.8rem, center, none);
+}
+
+.settings-tray {
+  @include flex-box(row, none, center, space-between);
+  background: #eee;
+  padding: 10px 15px;
+  padding-right: 2rem;
+  .hide-chat-btn {
+    background-color: rgba($color: $gray-3, $alpha: 0.3) !important;
+    border: $border-style;
+    transition: all ease 0.25s;
+    &:hover {
+      background-color: rgba($color: $red-2, $alpha: 0.8) !important;
+      color: $white-color;
+      border: none;
+    }
+  }
+  &--right {
+    float: right;
+
+    i {
+      margin-top: 10px;
+      font-size: 25px;
+      color: grey;
+      margin-left: 14px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $blue-3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.chat-hr {
+  margin: 5px auto;
+  width: 60%;
+}
+
+.chat-box-tray {
+  background: #eee;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 15px;
+  align-items: center;
+  margin-top: 19px;
+  bottom: 0;
+
+  input {
+    margin: 0 10px;
+    padding: 6px 2px;
+  }
+
+  i {
+    color: grey;
+    font-size: 30px;
+    vertical-align: middle;
+
+    &:last-of-type {
+      margin-left: 25px;
+    }
+  }
+}
+.profile-image {
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 40px;
+}

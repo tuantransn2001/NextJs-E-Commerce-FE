@@ -9,7 +9,17 @@ export default function Payment({}) {
         <div className="row">
           <div className="c-12 gutter flex-center">
             <div className={cx('img-link-wrapper')}>
+<<<<<<< HEAD
               <Image src={payments} alt="Payments" className={cx('img')} />
+=======
+              <Image
+                src={payments}
+                alt="Payments"
+                className={cx('img')}
+                width={40}
+                height={40}
+              />
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
             </div>
           </div>
         </div>

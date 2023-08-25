@@ -1,0 +1,57 @@
+@import '../../../../../sass/helpers/mixin.scss';
+@import '../../../../../sass/helpers/variable.scss';
+@import '../../../../../sass/helpers/extend.scss';
+.friend-drawer-wrapper {
+  padding: 10px 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.profile-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.friend-drawer {
+  vertical-align: baseline;
+  background: #fff;
+  transition: 0.3s ease;
+  @include flex-box(row, 0, center, none);
+  &--grey {
+    background: #eee;
+  }
+
+  .text {
+    width: 60%;
+    margin-left: 1.2rem;
+    h6 {
+      margin-bottom: 0;
+      @extend .paragraph-text-style-strong;
+    }
+
+    p {
+      margin: 0;
+      @extend .paragraph-text-style;
+    }
+  }
+
+  .time {
+    @extend .paragraph-text-style;
+    font-size: $fs-1;
+  }
+
+  &--onhover:hover {
+    background: $blue-3;
+    cursor: pointer;
+
+    p,
+    h6,
+    .time {
+      color: #fff !important;
+    }
+  }
+}
+.chat-hr {
+  margin: 5px auto;
+  width: 60%;
+}

@@ -3,7 +3,11 @@ import React, { ChangeEvent, useState } from 'react';
 import Image from 'next/image';
 import payment_cards from '../../../assets/img/products/payment_cards.png';
 import classNames from 'classnames/bind';
+<<<<<<< HEAD
 import { Cart, Product, ProductVariant } from '@/domain/common';
+=======
+import { Product, ProductVariant } from '@/ts/types/product.type';
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 import MyButton from '@/components/helpers/myButton';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 import Tab from '../tab';
@@ -21,6 +25,10 @@ import { ObjectType, ResponseAttributes } from '@/ts/types/common';
 import { ProductCartDTO } from '@/ts/dto/common.dto';
 import { isEmpty } from '@/common';
 import MySelect from '@/components/helpers/mySelect';
+<<<<<<< HEAD
+=======
+import { Cart } from '@/ts/types/cart.type';
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 const cx = classNames.bind(require('./style/ProductDesc.module.scss'));
 const tabData = ['Description', 'Additional information', 'Delivery'];
 const paymentOptionData = [
@@ -188,7 +196,11 @@ const ProductMeta = ({}) => {
         </div>
       </div>
       <div className="payment-cards-img-wrapper flex-center">
+<<<<<<< HEAD
         <Image src={payment_cards} alt="payment cards" />
+=======
+        <Image src={payment_cards} alt="payment cards" width={40} height={40} />
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
       </div>
     </>
   );

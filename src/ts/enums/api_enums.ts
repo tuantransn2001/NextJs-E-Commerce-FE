@@ -15,6 +15,10 @@ export enum API_PATH {
   getAllPaymentMethod = '/payment/get-all',
   getUserAddress = '/address/user',
   createUserOrder = '/order/user',
+<<<<<<< HEAD
+=======
+  searchUser = '/user/search',
+>>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 }
 export enum STATUS_MESSAGE {
   SUCCESS = 'Success',
