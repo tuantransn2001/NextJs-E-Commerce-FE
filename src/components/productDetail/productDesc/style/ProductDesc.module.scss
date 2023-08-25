@@ -1,0 +1,175 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+@import '../../../../sass/helpers/extend.scss';
+.product-description-wrapper {
+  padding: 6rem 2rem;
+  .product-detailt-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  .product-information-wrapper {
+    @include flex-box(column, 2rem, none, none);
+    .product-name {
+      @include text-style(
+        $fs-9,
+        $medium,
+        none,
+        none,
+        left,
+        uppercase,
+        $primary-color
+      );
+    }
+    .product-price-wrapper {
+      @include flex-box(row, 1rem, center, none);
+      .old-price {
+        @include text-style($fs-6, $normal, none, none, left, none, $gray-1);
+        position: relative;
+        &::after {
+          content: '';
+          width: 100%;
+          height: 0.1rem;
+          background-color: $gray-1;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+        }
+      }
+      .discount-price {
+        @extend .old-price;
+        font-size: $fs-7;
+        color: $red-1;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .product-options-wrapper {
+    @include flex-box(column, 0.8rem, none, none);
+    .product-option-title {
+      @include text-style($fs-3, $medium, none, none, left, none, $black-2);
+    }
+    .product-option-list {
+      @include flex-box(row, 0.4rem, center, none);
+      .option-item {
+        width: 6.4rem;
+        height: 6.4rem;
+        padding: 0.1rem;
+        border: 0.1rem solid $black-3;
+        @extend .flex-center;
+        .option-item-img {
+          width: 90%;
+          height: 90%;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .payment-options-wrapper {
+    @include flex-box(row, 0.8rem, none, none);
+    .payment-option-wrapper {
+      width: 100%;
+      .payment-option {
+        height: 4.2rem;
+        width: 100%;
+        border-radius: 0.4rem;
+        border: 1px solid darkgray;
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(0, 0, 0, 0.04);
+        @include flex-box(row, 0.2rem, center, none);
+        cursor: pointer;
+        & input {
+          margin-top: -0.2rem;
+        }
+        & span {
+          @include text-style(
+            $fs-2,
+            $medium,
+            none,
+            none,
+            left,
+            none,
+            $primary-color
+          );
+        }
+      }
+    }
+  }
+  .payment-benefit {
+    display: block;
+    margin-top: 1.2rem;
+    @include text-style($fs-2, $medium, none, none, left, none, $green-1);
+  }
+  .product-meta-wrapper {
+    @include flex-box(column, none, flex-start, none);
+    .product-meta-row-content {
+      width: 100%;
+      padding: 0.8rem 0;
+      border-bottom: 0.1rem solid $rgba-black-1;
+      @include flex-box(row, 0.2rem, center, none);
+      .label {
+        @include text-style($fs-2, $medium, none, none, left, none, $black-2);
+      }
+      .caption {
+        @extend .label;
+        font-size: $fs-1;
+        font-weight: $normal;
+      }
+    }
+  }
+  .product-information-extend-wrapper {
+    margin-top: 10rem;
+    @include flex-box(column, 4rem, center, none);
+    padding: 4rem;
+    .product-information-tab-list {
+      @include flex-box(row, 4rem, center, none);
+      .product-information-tab-item {
+        &:hover {
+          cursor: pointer;
+        }
+        .product-information-tab-content {
+          @include text-style(
+            $fs-7,
+            $medium,
+            none,
+            0.1rem,
+            none,
+            uppercase,
+            $gray-9
+          );
+        }
+      }
+    }
+    .description-tab-content-wrapper {
+      & p:nth-child(1) {
+        font-style: italic;
+      }
+      & ul {
+        margin-left: 1.4rem;
+        list-style-type: disc;
+      }
+    }
+    .additional-information-wrapper {
+      width: 77rem;
+      border: 0.1rem solid darkgray;
+      padding: 1.2rem 0.8rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 0.1rem;
+        height: 100%;
+        background-color: $rgba-black-1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../../../sass/helpers/mixin.scss";
+.infor-banner-wrapper {
+  padding: 0 12rem 5.8rem;
+  .infor-banner-img-list {
+    margin-bottom: 3.2rem;
+    @include flex-box(row, 1rem, center, none);
+  }
+}

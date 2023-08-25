@@ -1,0 +1,58 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.shop-address {
+  .shop-address-box-container {
+    width: 100%;
+    min-height: 456px;
+    padding: 4.2rem;
+    padding-bottom: 7rem;
+    border: 1px solid #00240f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    .shop-address-title {
+      @include text-style($fs-9, $medium, 1, 0, center, uppercase, $black-2);
+    }
+    .shop-address-desc {
+      @include text-style(
+        $fs-3,
+        $semi-bold,
+        2.2,
+        0,
+        center,
+        uppercase,
+        $black-2
+      );
+    }
+    .shop-number-phone {
+      @include text-style($fs-2, $medium, 1, 0, center, uppercase, $black-2);
+    }
+    .shop-email {
+      @include text-style(
+        $fs-2,
+        $normal,
+        1,
+        0,
+        center,
+        capitalize,
+        $primary-color
+      );
+    }
+    .shop-find-out-more {
+      margin-top: 1.4rem;
+      @include text-style(
+        $fs-2,
+        $semi-bold,
+        1,
+        0,
+        center,
+        capitalize,
+        $black-2
+      );
+    }
+    .about-shop {
+      @include text-style($fs-5, $medium, 1.4, 0, center, uppercase, $black-2);
+    }
+  }
+}

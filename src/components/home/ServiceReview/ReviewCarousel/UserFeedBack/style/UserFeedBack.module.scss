@@ -1,0 +1,26 @@
+@import '../../../../../../sass/helpers/variable.scss';
+@import '../../../../../../sass/helpers/mixin.scss';
+.user-feed-back-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  user-select: none;
+  .user-feed-back-rare-list {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    & svg {
+      font-size: 1.4rem;
+      color: $yellow-1;
+    }
+  }
+  .user-feed-back-title {
+    @include text-style($fs-4, $bold, 1, 0, left, none, $black-3);
+  }
+  .user-feed-back-content {
+    @include text-style($fs-2, $medium, 1.38, 0, left, none, $black-3);
+  }
+  .user-feed-back-name-and-time {
+    @include text-style(1.2rem, $medium, 1, 0, left, none, $gray-1);
+  }
+}

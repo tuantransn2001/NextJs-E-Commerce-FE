@@ -1,0 +1,37 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+.product-filter-wrapper {
+  margin-bottom: 4.3rem;
+  background-color: $white-1;
+  border: 0.1rem solid $border-color-1;
+  border-radius: 0.4rem;
+  padding: 2.8rem 3.5rem !important;
+}
+
+.drop-down-wrapper {
+  @include flex-box(column, 0.9rem, flex-start, none);
+  margin-bottom: 2rem;
+  width: 100%;
+
+  .drop-down-label {
+    @include text-style($fs-4, $semi-bold, 1, none, left, uppercase, $black-4);
+  }
+}
+
+.select {
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  border-radius: 0.2rem;
+  border: 1px solid $primary-color;
+  &:hover {
+    cursor: pointer;
+  }
+  .chakra-select__icon-wrapper {
+    display: none !important;
+  }
+  .option {
+    padding: 2rem;
+  }
+}

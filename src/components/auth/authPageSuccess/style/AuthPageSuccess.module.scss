@@ -1,0 +1,49 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+
+.auth-page-success-wrapper {
+  padding: 8.4rem 0;
+  border-top: 0.1rem solid $black-1;
+  border-bottom: 0.1rem solid $black-1;
+  .auth-page-success {
+    width: 80rem;
+    padding: 5.6rem 4.2rem;
+    margin: 0 auto;
+    background-color: $white-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .auth-page-icon-wrapper {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      border: 0.8rem solid $green-1;
+      margin-bottom: 2.5rem;
+      & svg {
+        font-size: 6rem;
+        color: $green-1;
+      }
+    }
+    .auth-page-success-title {
+      margin-bottom: 1.4rem;
+      @include text-style(
+        $fs-7,
+        $semi-bold,
+        1,
+        0.1rem,
+        center,
+        uppercase,
+        $black-2
+      );
+    }
+    .auth-page-success-subtitle {
+      margin-bottom: 3.2rem;
+      @include text-style($fs-2, $normal, 1, 0, center, none, $primary-color);
+    }
+    .direction-btns {
+      width: 100%;
+      padding: 0 17.6rem;
+      @include flex-box(row, 0.4rem, center, none);
+    }
+  }
+}

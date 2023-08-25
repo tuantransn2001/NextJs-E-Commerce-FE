@@ -1,0 +1,7 @@
+@import '../../../sass/helpers/variable.scss';
+@import '../../../sass/helpers/mixin.scss';
+@import '../../../sass/helpers/extend.scss';
+.product-detail-wrapper {
+  @include flex-box(column, 4rem, none, none);
+  display: flex !important;
+}

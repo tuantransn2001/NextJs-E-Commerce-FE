@@ -1,0 +1,83 @@
+@import '../../../../sass/helpers/mixin.scss';
+@import '../../../../sass/helpers/variable.scss';
+.sidebar-wrapper {
+  height: 100%;
+  border-right: $border-style;
+}
+.chat-input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+
+  &::placeholder {
+    color: #e3e3e3;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+.settings-tray {
+  background: #eee;
+  padding: 10px 15px;
+  @include flex-box(row, none, center, space-between);
+  .no-gutters {
+    padding: 0;
+  }
+
+  &--right {
+    float: right;
+
+    i {
+      margin-top: 10px;
+      font-size: 25px;
+      color: grey;
+      margin-left: 14px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $blue-3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.search-list-user-wrapper {
+  position: absolute;
+  @include flex-box(column, none, none, none);
+  top: 105%;
+  left: 0;
+  width: 100%;
+  box-shadow: $box-shadow-1;
+  z-index: 99;
+}
+.profile-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 40px;
+}
+.search-box {
+  position: relative;
+  background: $white-1;
+  padding: 0.8rem 0.8rem;
+  border-top: $border-style;
+  border-bottom: $border-style;
+  background: $white-color;
+  @include flex-box(row, none, center, none);
+  .input-wrapper {
+    border-radius: 40px;
+    width: 100%;
+
+    i {
+      color: $gray-1;
+      margin-left: 7px;
+      vertical-align: middle;
+    }
+  }
+}
+.chat-hr {
+  margin: 5px auto;
+  width: 60%;
+}

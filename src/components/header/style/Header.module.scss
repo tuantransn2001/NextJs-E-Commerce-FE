@@ -1,0 +1,81 @@
+@import '../../../sass/helpers/variable.scss';
+@import '../../../sass/helpers/extend.scss';
+.bg-wrapper {
+  .widget-elementor-bg {
+    width: 100%;
+    padding: 1rem;
+    background-color: $primary-color;
+    @extend .flex-center !optional;
+  }
+  .header {
+    padding: 2.8rem 0 0;
+  }
+}
+
+.dialog-search-header {
+  @include flex-box(row, none, center, space-between);
+  margin-bottom: 0.4rem;
+  .dialog-search-title {
+    @include text-style(
+      $fs-2,
+      $normal,
+      1,
+      0.14rem,
+      left,
+      uppercase,
+      $primary-color
+    );
+  }
+}
+
+.dialog-search-form-wrapper {
+  color: #555;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid currentColor;
+
+  .dialog-search-input {
+    border: none;
+    background: transparent;
+    margin: 0;
+    border: 1px solid transparent;
+    padding-left: 0.6rem;
+    border-radius: inherit;
+    outline: none !important;
+    width: 100%;
+    &::placeholder {
+      @include text-style($fs-1, $normal, 1, 0, left, none, $primary-color);
+    }
+  }
+  .dialog-search-list-wrapper {
+    position: absolute;
+    width: 100%;
+    overflow-y: scroll;
+    height: 200px;
+    top: 105%;
+    left: 0;
+    margin: 0;
+    border-radius: 5px;
+    background-color: $white-color;
+    padding: 2rem 2rem;
+  }
+  .dialog-search-btn {
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent !important;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+    .dialog-search-btn-icon {
+      @include text-style($fs-1, $normal, 1, 0, left, none, $primary-color);
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:focus {
+      box-shadow: 0 0 3px 0 #1183d6;
+      border-color: #1183d6;
+      outline: none;
+    }
+  }
+}

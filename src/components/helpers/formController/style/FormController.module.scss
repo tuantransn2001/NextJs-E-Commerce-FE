@@ -1,0 +1,99 @@
+@import '../../../../sass/helpers/variable.scss';
+@import '../../../../sass/helpers/mixin.scss';
+
+$correct-color: #38d715;
+$warn-color: rgba(
+  $color: #ff343e,
+  $alpha: 0.8,
+);
+
+.input-tag-wrapper {
+  height: 6rem;
+  @include flex-box(column, 0.6rem, none, none);
+  position: relative;
+  margin-bottom: 1.8rem;
+  .label-tag {
+    @include text-style($fs-3, $medium, 1, none, left, none, $gray-1);
+  }
+  .input-tag {
+    width: 100%;
+    min-height: 4rem;
+    padding: 0.4rem 1rem;
+    outline: none;
+    border-radius: $default-border-radius;
+    border: 0.2rem solid $border-color-1;
+    transition: all ease 0.25s;
+  }
+  .status-validate-icon-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-120%);
+    right: -2.4rem;
+    opacity: 0;
+    transition: all ease 0.3s;
+    .status-validate-icon {
+      font-size: 1.4rem;
+    }
+  }
+  .input-field-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding-left: 0.2rem;
+    @include text-style($fs-1, $medium, 1, 0, left, none, $primary-color);
+  }
+  &.correct {
+    .input-tag {
+      border-color: $correct-color;
+      animation: horizontal-shake-in linear 0.25s;
+    }
+    .status-validate-icon-wrapper {
+      right: 2.4rem;
+      opacity: 1;
+      .status-validate-icon {
+        color: $correct-color;
+      }
+      .status-validate-icon.exclamation {
+        display: none;
+      }
+    }
+  }
+  &.in-correct {
+    .input-tag {
+      border-color: $warn-color;
+      animation: horizontal-shake-in linear 0.25s;
+    }
+    .status-validate-icon-wrapper {
+      right: 2.4rem;
+      opacity: 1;
+      .status-validate-icon {
+        color: $warn-color;
+      }
+      .status-validate-icon.check {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes horizontal-shake-in {
+  0% {
+    margin-left: 0.6rem;
+  }
+  20% {
+    margin-left: 0.3rem;
+  }
+  40% {
+    margin-left: 0rem;
+  }
+  60% {
+    margin-left: -0.3rem;
+  }
+  80% {
+    margin-left: -0.6rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}

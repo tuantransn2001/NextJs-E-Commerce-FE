@@ -1,0 +1,58 @@
+@import '../../../../../sass/helpers/mixin.scss';
+.messages-chat {
+  @include flex-box(row, 1.2rem, none, none);
+  margin-right: 2rem;
+  .photo {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: #e6e7ed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .message {
+    @include flex-box(column, 0.4rem, flex-start, none);
+  }
+  &.text {
+    text-align: left;
+  }
+  &.text-only {
+    justify-content: flex-end;
+    .message {
+      @include flex-box(column, 0.4rem, flex-end, none);
+    }
+    &.text {
+      text-align: right;
+    }
+  }
+}
+
+.messages-chat .text {
+  width: max-content;
+  background-color: #f6f6f6;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.time {
+  font-size: 10px;
+  color: lightgrey;
+  margin-bottom: 10px;
+  margin-left: 0.2rem;
+}
+
+.response-time {
+  float: right;
+  margin-right: 40px !important;
+}
+
+.response {
+  float: right;
+  margin-right: 0px !important;
+  margin-left: auto; /* flexbox alignment rule */
+}
+
+.response .text {
+  background-color: #e3effd !important;
+}

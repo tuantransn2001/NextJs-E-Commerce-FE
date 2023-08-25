@@ -1,0 +1,28 @@
+@import '../../../sass/helpers/mixin.scss';
+@import '../../../sass/helpers/variable.scss';
+.container {
+  width: 90rem;
+  height: 50rem;
+  background-color: $white-color;
+  border: $border-style;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: $index-max;
+}
+
+.show-chatBox-btn-wrapper {
+  display: flex !important;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  width: 5rem;
+  height: 5rem;
+  .show-chatBox-btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem;
+    @include text-style($fs-4, $medium, 1, none, center, none, $white-1);
+  }
+}
