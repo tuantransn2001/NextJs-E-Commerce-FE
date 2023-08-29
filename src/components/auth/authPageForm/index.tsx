@@ -34,15 +34,9 @@ const handleOnSubmit = async (
   );
 
   if (isEmpty(missFieldData)) {
-<<<<<<< HEAD
-    const { status, data, error }: ResponseAttributes =
-      formType === AUTH_TYPE.LOGIN
-        ? await AuthService.login(authData)
-=======
     const { status, data, error } =
       formType === AUTH_TYPE.LOGIN
         ? ((await AuthService.login(authData)) as ResponseAttributes)
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
         : ((await AuthService.register(authData)) as ResponseAttributes);
 
     if (status === RESPONSE_STATUS.SUCCESS) {
