@@ -1,22 +1,19 @@
 import { isEmpty } from '@/common';
 import { useSocket } from '@/context/socketContext';
 import { ChatServices } from '@/services/chat.service';
-import { WebSocketServices } from '@/services/websocket.service';
 import { PaginationDTO } from '@/ts/dto/common.dto';
 import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import { Message, UserContactItem } from '@/ts/types/chat.type';
 import { ResponseAttributes, SetValue } from '@/ts/types/common';
 import { User } from '@/ts/types/user.type';
 import { handleFindContactUserFromMembers } from '@/ts/utils/chatLogics';
-
 import { useCallback, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-
 import classNames from 'classnames/bind';
 import CartContactItem from './cardContactItem';
 import Image from 'next/image';
-import { array } from 'joi';
-import { setCurrentUser } from '@/redux/slice/auth.slice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(require('./style/SideBarMessage.module.scss'));
 
 type FormValues = {
@@ -25,7 +22,6 @@ type FormValues = {
 
 const SideBarMessage = () => {
   const socket = useSocket().Socket as any;
-  const roomID = useSocket().roomID as string;
   const currentUser = useSocket().currentUser as User;
   const userContactList = useSocket().userContactList as UserContactItem[];
   const setUserContactInfo = useSocket().setUserContactInfo as SetValue<User>;
@@ -71,20 +67,15 @@ const SideBarMessage = () => {
           src={currentUser?.avatar as string}
           alt="Profile img"
         />
-        <span className={cx('settings-tray--right')}>
-          <i className={cx('material-icons')}>cached</i>
-          <i className={cx('material-icons')}>message</i>
-          <i className={cx('material-icons')}>menu</i>
-        </span>
       </div>
       <form className={cx('search-box')} onSubmit={handleSubmit(onSubmit)}>
-        <i className={cx('material-icons')}>search</i>
+        <FontAwesomeIcon icon={faSearch} className={cx('action-icon')} />
         <input
           {...register('name')}
           className={cx('chat-input')}
           placeholder="Search here"
           type="text"
-        />{' '}
+        />
         <div className={cx('search-list-user-wrapper')}>
           {!isEmpty(searchListUser) &&
             searchListUser.map((user, index) => (

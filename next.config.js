@@ -8,6 +8,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.lenleys.co.uk',
       },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com',
+      },
     ],
     minimumCacheTTL: 15000000,
   },

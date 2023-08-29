@@ -70,6 +70,8 @@ export class WebSocketServices {
     return socket.on(
       EVENTS.SERVER.RECEIVED_ROOM_MESSAGE,
       (response: SocketEmitResponse<ReceivedRoomMessageResponse>) => {
+        console.log('response:::', response);
+        console.log('payload:::', payload);
         if (isRightReceiver(response.data?.members, payload.currentUser)) {
           const updateUserContactInfoData = {
             ...handleFindContactUserFromMembers(

@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import CartService from '@/services/cart.service';
 import { setCart } from '@/redux/slice/cart.slice';
+import Messages from '@/components/messages';
 
 export default function HomeTemplate({ children }: WrapperComponentProps) {
   const dispatch = useDispatch();
@@ -65,6 +66,7 @@ export default function HomeTemplate({ children }: WrapperComponentProps) {
       <NavBar />
       <>{children}</>
       <Footer />
+      <Messages />
     </>
   ) : (
     <></>

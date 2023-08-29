@@ -11,7 +11,12 @@ import {
   handleConvertDate,
   handleFindContactUserFromMembers,
 } from '@/ts/utils/chatLogics';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAngleDown,
+  faMicrophone,
+  faPaperclip,
+  faPaperPlane,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useForm } from 'react-hook-form';
 import CardConversation from './cardConversation';
@@ -91,6 +96,7 @@ const Conversation = ({ handleToggleChatBox }: ConversationProps) => {
         <div className={cx('messages-chat-wrapper')}>
           {!isEmpty(messages) &&
             messages.map((message, index) => {
+              console.log({ sender: message.sender, currentUser });
               const isSameSender =
                 message.sender.id === messages[index - 1]?.sender.id;
 
@@ -112,7 +118,10 @@ const Conversation = ({ handleToggleChatBox }: ConversationProps) => {
           className={cx('chat-box-tray')}
           onSubmit={handleSubmit(handleSendMessage)}
         >
-          <i className={cx('material-icons')}>sentiment_very_satisfied</i>
+          <FontAwesomeIcon
+            className={cx('chat-box-tray-icon')}
+            icon={faPaperclip}
+          />
           <input
             {...register('message')}
             className={cx('chat-input')}
@@ -122,8 +131,14 @@ const Conversation = ({ handleToggleChatBox }: ConversationProps) => {
               e.key === 'Enter' && handleSubmit(handleSendMessage)
             }
           />
-          <i className={cx('material-icons')}>mic</i>
-          <i className={cx('material-icons')}>send</i>
+          <FontAwesomeIcon
+            className={cx('chat-box-tray-icon')}
+            icon={faMicrophone}
+          />
+          <FontAwesomeIcon
+            className={cx('chat-box-tray-icon')}
+            icon={faPaperPlane}
+          />
         </form>
       </div>
     </div>

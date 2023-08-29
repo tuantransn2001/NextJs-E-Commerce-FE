@@ -56,7 +56,6 @@ const SocketsProvider = ({ children }: SocketProviderProps) => {
   const [userContactList, setUserContactList] = useState<
     UserContactItem[] | null
   >(null);
-
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [userContactInfo, setUserContactInfo] = useState<User | null>(null);
   const currentUserLogin = useSelector(userSelector);

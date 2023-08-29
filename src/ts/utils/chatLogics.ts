@@ -1,14 +1,15 @@
 import { isEmpty } from '@/common';
 import moment from 'moment';
 
-import { Falsy, ObjectType } from '../types/common';
+import { Falsy } from '../types/common';
 import { User } from '../types/user.type';
 
 export const handleCheckTwoSameUsers = (
   targetUser: User,
   compareUser: User,
 ) => {
-  return targetUser.id === compareUser.id;
+  if (!targetUser || !compareUser) return false;
+  return targetUser?.id === compareUser?.id;
 };
 
 export const isUserListValidToRender = (data: any[] | Falsy) => {
@@ -40,5 +41,5 @@ export const handleFindContactUserFromMembers = (
     !handleCheckTwoSameUsers(compareUser, currentUserLogin);
   const foundUser = members.find(isNotSender);
 
-  return foundUser ? foundUser : undefined;
+  return foundUser ? foundUser : false;
 };

@@ -78,13 +78,13 @@
     padding: 6px 2px;
   }
 
-  i {
+  .chat-box-tray-icon {
     color: grey;
-    font-size: 30px;
+    font-size: $fs-8;
     vertical-align: middle;
 
     &:last-of-type {
-      margin-left: 25px;
+      margin-left: 1.8rem;
     }
   }
 }
