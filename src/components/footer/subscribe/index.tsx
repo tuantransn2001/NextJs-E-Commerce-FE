@@ -1,5 +1,7 @@
+import MyButton from '@/components/helpers/myButton';
+import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
 import classNames from 'classnames/bind';
-import { Button } from '@chakra-ui/react';
+
 const cx = classNames.bind(require('./style/Subscribe.module.scss'));
 
 export default function Subscribe({}) {
@@ -18,7 +20,9 @@ export default function Subscribe({}) {
                   className={cx('input')}
                   placeholder="Enter your mail"
                 />
-                <Button>Subscribe</Button>
+                <MyButton type={BUTTON_TYPE.primary} size={BUTTON_SIZE.lg}>
+                  Subscribe
+                </MyButton>
               </div>
             </div>
           </div>
