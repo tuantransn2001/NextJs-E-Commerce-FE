@@ -19,17 +19,7 @@ const renderSocialIconLink = () => {
     return (
       <li className={cx('social-icon-item')} key={index}>
         <div className={`${cx('social-icon-link-wrapper')} flex-center`}>
-<<<<<<< HEAD
           <Image src={icon_src} alt="Facebook" className={cx('social-icon')} />
-=======
-          <Image
-            src={icon_src}
-            alt="Facebook"
-            className={cx('social-icon')}
-            width={40}
-            height={40}
-          />
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
         </div>
       </li>
     );

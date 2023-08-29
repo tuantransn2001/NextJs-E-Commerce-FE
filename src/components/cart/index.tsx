@@ -7,11 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { isAuthSelector } from '@/redux/slice/auth.slice';
 import { handleCalcCartTotal, isEmpty } from '@/common';
 import MyButton from '@/components/helpers/myButton';
-<<<<<<< HEAD
 import { Cart, CartItem } from '@/domain/common';
-=======
-
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 import { BUTTON_SIZE, BUTTON_TYPE, HREF } from '@/ts/enums/common';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -31,10 +27,6 @@ import { addProductToCartDeepChecker } from '@/ts/utils/dataDeepChecker';
 import { AddProductToCartDTO, ProductCartDTO } from '@/ts/dto/common.dto';
 import CartService from '@/services/cart.service';
 import classNames from 'classnames/bind';
-<<<<<<< HEAD
-=======
-import { Cart, CartItem } from '@/ts/types/cart.type';
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 const cx = classNames.bind(require('./style/Cart.module.scss'));
 
 const SUBMIT_MODAL_DATA: ObjectType = {

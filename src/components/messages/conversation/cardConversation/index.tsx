@@ -1,7 +1,6 @@
 import { User } from '@/ts/types/user.type';
-import { Avatar } from '@chakra-ui/react';
 import { useSocket } from '@/context/socketContext';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(require('./style/cardConversation.module.scss'));
@@ -26,7 +25,7 @@ function CardConversation({
       {isOkRenderAvatar && (
         <Image
           className={cx('photo')}
-          src={userContactInfo.avatar}
+          src={userContactInfo.avatar as string}
           alt={userContactInfo.firstName}
           width={20}
           height={20}

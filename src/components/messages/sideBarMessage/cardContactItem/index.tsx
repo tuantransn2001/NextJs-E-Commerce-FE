@@ -24,7 +24,7 @@ const CartContactItem = ({
           width={50}
           height={50}
           className={cx('profile-image')}
-          src={user.avatar}
+          src={user.avatar as string}
           alt={user.firstName}
         />
         <div className={cx('text')}>

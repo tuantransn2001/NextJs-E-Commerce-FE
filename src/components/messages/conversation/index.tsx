@@ -63,7 +63,7 @@ const Conversation = ({ handleToggleChatBox }: ConversationProps) => {
               width={50}
               height={50}
               className={cx('profile-image')}
-              src={userContactInfo?.avatar}
+              src={userContactInfo?.avatar as string}
               alt={userContactInfo?.firstName}
             />
             <div className={cx('text')}>

@@ -8,11 +8,7 @@ import MyButton from '../helpers/myButton';
 import LoadingScreen from '../helpers/loadingScreen';
 import { useGet, useGetURLParams } from '@/customizes/hooks';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@/ts/enums/common';
-<<<<<<< HEAD
 import { Product, ProductVariant } from '@/domain/common';
-=======
-import { Product, ProductVariant } from '@/ts/types/product.type';
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 import {
   handleFormatTitleInCludeSpecChar,
   handleGetHrefArr,

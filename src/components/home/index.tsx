@@ -19,17 +19,7 @@ const HomePage = ({}) => {
   return (
     <>
       <div className={cx('wrapper')}>
-<<<<<<< HEAD
         <Image src={banner} alt="banner" className={cx('img')} />
-=======
-        <Image
-          src={banner}
-          alt="banner"
-          className={cx('img')}
-          width={40}
-          height={40}
-        />
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
       </div>
       <CategoryQuickView />
       <CategoryView />

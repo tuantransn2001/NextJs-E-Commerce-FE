@@ -2,11 +2,7 @@
 import { useGet } from '@/customizes/hooks';
 import Image from 'next/image';
 import { CHECKOUT_FORM_DATA } from '@/data/checkout';
-<<<<<<< HEAD
 import { Address, CartItem, Payment } from '@/domain/common';
-=======
-
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 import { cartSelector } from '@/redux/slice/cart.slice';
 import { API_PATH, RESPONSE_STATUS } from '@/ts/enums/api_enums';
 import { useSelector } from 'react-redux';
@@ -25,12 +21,6 @@ import { ObjectType } from '@/ts/types/common';
 import MyModal from '../helpers/modal';
 import { useRouter } from 'next/router';
 import classNames from 'classnames/bind';
-<<<<<<< HEAD
-=======
-import { Payment } from '@/ts/types/payment.type';
-import { CartItem } from '@/ts/types/cart.type';
-import { Address } from '@/ts/types/address.type';
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 const cx = classNames.bind(require('./style/Checkout.module.scss'));
 
 const PAYMENT_ICON: Record<number, JSX.Element> = {

@@ -4,5 +4,5 @@ export interface User {
   lastName: string;
   email: string;
   type: string;
-  avatar: string;
+  avatar?: string;
 }

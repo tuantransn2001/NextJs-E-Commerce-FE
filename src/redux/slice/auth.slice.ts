@@ -1,10 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-<<<<<<< HEAD
 import { User } from '../../domain/common';
-=======
-import { User } from '../../ts/types/user.type';
->>>>>>> 0595a16089032e3ab77fef9886a1613486f99bba
 interface AuthState {
   user: User | null;
   isAuth: boolean;

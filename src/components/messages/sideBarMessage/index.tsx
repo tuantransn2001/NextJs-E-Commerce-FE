@@ -68,7 +68,7 @@ const SideBarMessage = () => {
           width={50}
           height={50}
           className={cx('profile-image')}
-          src={currentUser?.avatar}
+          src={currentUser?.avatar as string}
           alt="Profile img"
         />
         <span className={cx('settings-tray--right')}>

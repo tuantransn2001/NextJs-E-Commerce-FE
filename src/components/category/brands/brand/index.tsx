@@ -1,5 +1,5 @@
-import { StaticImageData } from 'next/image';
-import { BrandsImgWrapperStyled, BrandsImgStyled } from './style/BrandStyled';
+import Image, { StaticImageData } from 'next/image';
+import { BrandsImgWrapperStyled } from './style/BrandStyled';
 
 interface BrandProps {
   imgSrc: StaticImageData;
@@ -8,7 +8,7 @@ interface BrandProps {
 export default function Brand({ imgSrc }: BrandProps) {
   return (
     <BrandsImgWrapperStyled>
-      <BrandsImgStyled src={imgSrc} alt="categories" />
+      <Image src={imgSrc} alt="categories" width={215} height={148} />
     </BrandsImgWrapperStyled>
   );
 }
